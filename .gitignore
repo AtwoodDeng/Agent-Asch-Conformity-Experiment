@@ -1,0 +1,24 @@
+# 运行产物与本地环境
+runs/
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+pytest-cache-files-*/
+build/
+dist/
+
+# 凭据：绝不入库
+.env
+.env.local
+*.key
+
+# 编辑器 / 系统
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# 第三方扫描件：体积大且受版权保护，不入库（来源见 Docs/SOURCES.md）
+# 如确需入库，用 git add -f 单独放行
+*.pdf

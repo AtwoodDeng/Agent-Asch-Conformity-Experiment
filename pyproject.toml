@@ -1,0 +1,43 @@
+[project]
+name = "asch-conformity-experiment"
+version = "0.1.0"
+description = "Asch (1956) line-judgement conformity paradigm on SocioVerse2: structure reproduction, not claim reproduction"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+
+dependencies = [
+    "pillow>=10.0",
+]
+
+[project.optional-dependencies]
+# Needed only for --llm openai (real model calls). Both are imported lazily,
+# so the offline scripted path and the whole test suite run without them.
+llm = ["openai>=1.0", "python-dotenv>=1.0"]
+# The SocioVerse2 runtime is not on PyPI; install it from its own checkout.
+# Nothing here is required for the standalone driver.
+engine = []
+
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+asch-run = "scripts.run_asch:main"
+asch-analyze = "scripts.analyze:main"
+asch-stimuli = "scripts.make_stimuli:main"
+asch-freeze = "scripts.freeze_hashes:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+filterwarnings = ["error::DeprecationWarning:asch.*"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+ignore = ["E501"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["B011"]

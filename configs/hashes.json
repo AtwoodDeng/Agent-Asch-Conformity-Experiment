@@ -1,0 +1,15 @@
+{
+  "schema": "asch.hashes/1",
+  "version": "v1",
+  "sources": {
+    "asch/stimuli.py": "c43da335ac2883f5a89073953ba80de8a635756118ce682fed1aeee009b4e3e1",
+    "asch/conditions.py": "b42cee51bd4cd29620ff0e5e48ef9f5a597c24efc2572705fb074b40a7e4694b",
+    "asch/prompts.py": "37aceedd4ce650ed921efe791b690164bccf9af99f7dc795e1badec33c5e9de4",
+    "asch/distractors.py": "dd167f2d919f4711d8777e5144ea827cee669bd2a4b679a47e897d66eef17b34"
+  },
+  "artifacts": {
+    "stimuli/manifest.json": "41c213e8a8f48241c7f73268855f7d5277e91e23565d21301bd11cf397dcb588",
+    "stimuli/answer_key.json": "682dbc9b270adf23b3e6bfd69360ad04b5b20672da49fd650d9aa66509e3432e",
+    "distractors/streams.json": "2495dd6d6db39106b522595befbe1a30fca1bd553204e14fba6ecaeb70547d41"
+  }
+}

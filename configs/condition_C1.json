@@ -1,0 +1,241 @@
+{
+  "condition": "C1",
+  "description": {
+    "key": "C1",
+    "label": "一致错误多数",
+    "peer_mode": "unanimous_error",
+    "shows_peer_answers": true,
+    "adds_gaps": false,
+    "note": "Six confederates give the same wrong answer on critical trials."
+  },
+  "sessions": [
+    {
+      "session_id": "C1-S01",
+      "condition": "C1",
+      "index": 0,
+      "arrangement": "A1",
+      "seed": 24445117,
+      "subject_seat": 7,
+      "confederate_seats": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "dissenter_seat": null,
+      "stream_set": null,
+      "n_trials": 18
+    },
+    {
+      "session_id": "C1-S02",
+      "condition": "C1",
+      "index": 1,
+      "arrangement": "A2",
+      "seed": 36305701,
+      "subject_seat": 7,
+      "confederate_seats": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "dissenter_seat": null,
+      "stream_set": null,
+      "n_trials": 18
+    },
+    {
+      "session_id": "C1-S03",
+      "condition": "C1",
+      "index": 2,
+      "arrangement": "A3",
+      "seed": 35108944,
+      "subject_seat": 7,
+      "confederate_seats": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "dissenter_seat": null,
+      "stream_set": null,
+      "n_trials": 18
+    },
+    {
+      "session_id": "C1-S04",
+      "condition": "C1",
+      "index": 3,
+      "arrangement": "A1",
+      "seed": 32172396,
+      "subject_seat": 7,
+      "confederate_seats": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "dissenter_seat": null,
+      "stream_set": null,
+      "n_trials": 18
+    },
+    {
+      "session_id": "C1-S05",
+      "condition": "C1",
+      "index": 4,
+      "arrangement": "A2",
+      "seed": 35519172,
+      "subject_seat": 7,
+      "confederate_seats": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "dissenter_seat": null,
+      "stream_set": null,
+      "n_trials": 18
+    },
+    {
+      "session_id": "C1-S06",
+      "condition": "C1",
+      "index": 5,
+      "arrangement": "A3",
+      "seed": 23049386,
+      "subject_seat": 7,
+      "confederate_seats": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "dissenter_seat": null,
+      "stream_set": null,
+      "n_trials": 18
+    },
+    {
+      "session_id": "C1-S07",
+      "condition": "C1",
+      "index": 6,
+      "arrangement": "A1",
+      "seed": 27620436,
+      "subject_seat": 7,
+      "confederate_seats": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "dissenter_seat": null,
+      "stream_set": null,
+      "n_trials": 18
+    },
+    {
+      "session_id": "C1-S08",
+      "condition": "C1",
+      "index": 7,
+      "arrangement": "A2",
+      "seed": 23651050,
+      "subject_seat": 7,
+      "confederate_seats": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "dissenter_seat": null,
+      "stream_set": null,
+      "n_trials": 18
+    },
+    {
+      "session_id": "C1-S09",
+      "condition": "C1",
+      "index": 8,
+      "arrangement": "A3",
+      "seed": 22695820,
+      "subject_seat": 7,
+      "confederate_seats": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "dissenter_seat": null,
+      "stream_set": null,
+      "n_trials": 18
+    },
+    {
+      "session_id": "C1-S10",
+      "condition": "C1",
+      "index": 9,
+      "arrangement": "A1",
+      "seed": 26449834,
+      "subject_seat": 7,
+      "confederate_seats": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "dissenter_seat": null,
+      "stream_set": null,
+      "n_trials": 18
+    },
+    {
+      "session_id": "C1-S11",
+      "condition": "C1",
+      "index": 10,
+      "arrangement": "A2",
+      "seed": 25529908,
+      "subject_seat": 7,
+      "confederate_seats": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "dissenter_seat": null,
+      "stream_set": null,
+      "n_trials": 18
+    },
+    {
+      "session_id": "C1-S12",
+      "condition": "C1",
+      "index": 11,
+      "arrangement": "A3",
+      "seed": 26299493,
+      "subject_seat": 7,
+      "confederate_seats": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "dissenter_seat": null,
+      "stream_set": null,
+      "n_trials": 18
+    }
+  ]
+}

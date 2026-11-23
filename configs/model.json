@@ -1,0 +1,22 @@
+{
+  "llm_kinds": [
+    "scripted",
+    "openai"
+  ],
+  "default_llm_kind": "scripted",
+  "scripted_policies": [
+    "random",
+    "first",
+    "last",
+    "peer"
+  ],
+  "default_scripted_policy": "random",
+  "sampling": {
+    "temperature": 0.7,
+    "max_tokens": 24,
+    "max_workers": 4,
+    "prompt_lang": "zh",
+    "note": "max_tokens=24 allows a letter plus a short reason; the parser accepts a bare letter and rejects replies naming more than one slot."
+  },
+  "answer_key_visibility": "never in observation; used only by the collector and the analysis"
+}

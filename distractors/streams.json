@@ -1,0 +1,720 @@
+{
+  "schema": "asch.distractors/1",
+  "manipulation": "irrelevant inter-trial information presented passively (C4 only)",
+  "constraints": {
+    "chars": [
+      60,
+      100
+    ],
+    "sentences": [
+      3,
+      5
+    ],
+    "no_digits": true,
+    "no_latin": true,
+    "no_questions": true,
+    "forbidden_terms": [
+      "线段",
+      "线条",
+      "直线",
+      "曲线",
+      "划线",
+      "长度",
+      "长短",
+      "相等",
+      "等长",
+      "比较线",
+      "数字",
+      "选项",
+      "答案",
+      "正确",
+      "错误",
+      "多数",
+      "少数",
+      "大家",
+      "群体",
+      "权威",
+      "服从",
+      "独立判断",
+      "独立",
+      "同意",
+      "意见",
+      "投票",
+      "评价",
+      "赞同",
+      "座位",
+      "参与者",
+      "研究",
+      "实验",
+      "测验",
+      "题目",
+      "请",
+      "应该",
+      "必须",
+      "不要",
+      "记住",
+      "压力",
+      "影响",
+      "改变"
+    ]
+  },
+  "gaps_per_stream": 17,
+  "invariants": {
+    "streams": {
+      "S1": 17,
+      "S2": 17,
+      "S3": 17
+    },
+    "total_pieces": 51,
+    "char_range": [
+      62,
+      92
+    ],
+    "gap_count_per_stream": 17,
+    "forbidden_terms": 42
+  },
+  "streams": {
+    "S1": [
+      {
+        "stream_set_id": "S1",
+        "gap_id": "S1-G01",
+        "after_trial_index": 1,
+        "after_trial_id": "T01",
+        "order_index": 0,
+        "text": "窗边传来树叶摩擦的声音，走廊里有人轻轻关上了门。桌角放着一只陶瓷杯，杯口还留着淡淡的茶香。忽然想起家里阳台上的植物该浇水了，晾干的外套也还挂在外面。窗外的云慢慢飘过，屋里又安静下来。",
+        "chars": 91,
+        "sentences": 4,
+        "sha256": "458bb4ace7b5e89368a96decd7ea7b607fa0d76bd2997725fff3651f1bac09ce"
+      },
+      {
+        "stream_set_id": "S1",
+        "gap_id": "S1-G02",
+        "after_trial_index": 2,
+        "after_trial_id": "T02",
+        "order_index": 1,
+        "text": "楼下的车棚顶积了一层薄灰，风一吹就有细小的颗粒飘下来。厨房的水壶刚开始发出轻微的响声，冰箱在角落里低低地运转。想起抽屉深处还压着一副旧手套，冬天大概还能用上。天色比刚才暗了些。",
+        "chars": 88,
+        "sentences": 4,
+        "sha256": "23f88609942bbd82835834653781d2a54821f8cd54090e919b89628ba4d8b333"
+      },
+      {
+        "stream_set_id": "S1",
+        "gap_id": "S1-G03",
+        "after_trial_index": 3,
+        "after_trial_id": "T03",
+        "order_index": 2,
+        "text": "有人在楼道里拖着行李箱走过，轮子在地砖上发出连续的响声。书架上那本翻旧的册子被抽出来又放回去，纸页边缘卷起。茶几上留着半包没拆开的饼干。傍晚的光线斜着照进来，落在桌布的一角。",
+        "chars": 87,
+        "sentences": 4,
+        "sha256": "a0bd69df54e432ecf97f2975098810fcb793ec1069a2cb5eff5d1794162c0f77"
+      },
+      {
+        "stream_set_id": "S1",
+        "gap_id": "S1-G04",
+        "after_trial_index": 4,
+        "after_trial_id": "T04",
+        "order_index": 3,
+        "text": "洗衣机转到最后一个程序，水声停了很久才响起提示音。厨房台面上摆着几个刚洗过的碗，水渍慢慢往下淌。想起该把冰箱里那盒牛奶挪到前面来。窗外的路灯亮起，颜色比昨天柔和一些。",
+        "chars": 83,
+        "sentences": 4,
+        "sha256": "4678920f8d7e6d399e0fb90df78225decdebc1200bc7454a085d12a0019891a4"
+      },
+      {
+        "stream_set_id": "S1",
+        "gap_id": "S1-G05",
+        "after_trial_index": 5,
+        "after_trial_id": "T05",
+        "order_index": 4,
+        "text": "早上的公交车里人不算多，坐在靠窗的位置能看见街边的店铺陆续开门。面包店的玻璃柜里摆着新出炉的东西，香气隔着门缝散出来。到了下一站，上来一位提着布袋的老人。车继续往前开，路口亮起了红灯。",
+        "chars": 92,
+        "sentences": 4,
+        "sha256": "e1a35ad20d093d6df666eeb1b2b0324f6a762334a7ba93c1bd8fe0d3a918cf3d"
+      },
+      {
+        "stream_set_id": "S1",
+        "gap_id": "S1-G06",
+        "after_trial_index": 6,
+        "after_trial_id": "T06",
+        "order_index": 5,
+        "text": "桌上摊着一份没写完的清单，笔帽被放在纸的一角。水杯里的水凉了，杯壁上结着细小的水汽。走廊尽头的自动售货机发出轻微的嗡鸣。想起明天要记得把伞带上，天气预报说会下雨。",
+        "chars": 81,
+        "sentences": 4,
+        "sha256": "2e66ab575330a338531325744a27282014b060faec37d1b96b9e85bee2af1fa6"
+      },
+      {
+        "stream_set_id": "S1",
+        "gap_id": "S1-G07",
+        "after_trial_index": 7,
+        "after_trial_id": "T07",
+        "order_index": 6,
+        "text": "阳台上的薄荷长得有些散乱，叶片边缘被晒得发亮。邻居家的窗台上摆着几盆不知名的花草，风一吹就轻轻摇晃。把晾着的衬衫翻了个面，布料还带着一点潮气。午后的阳光慢慢移过墙面。",
+        "chars": 83,
+        "sentences": 4,
+        "sha256": "b8f15e8e338702af79a997b7e705797a04aff9ddff8568ebb7ac1201b631835f"
+      },
+      {
+        "stream_set_id": "S1",
+        "gap_id": "S1-G08",
+        "after_trial_index": 8,
+        "after_trial_id": "T08",
+        "order_index": 7,
+        "text": "图书馆的旧木桌边缘被磨得很光滑，台灯罩上积了一层灰。有人在远处翻动书页，声音时断时续。窗外有一排树，枝条的影子铺在地面上。坐着的时候能听见暖气管里的水流声，节奏很不规律。",
+        "chars": 85,
+        "sentences": 4,
+        "sha256": "fa0ddeb9d247d7789a9824afef6cee6461dd06efbc679ed0809911ab2ebaadf2"
+      },
+      {
+        "stream_set_id": "S1",
+        "gap_id": "S1-G09",
+        "after_trial_index": 9,
+        "after_trial_id": "T09",
+        "order_index": 8,
+        "text": "厨房的水池里泡着几个杯子，水面浮着一点泡沫。灶台上方的抽油烟机表面有一层薄薄的油光。想起柜子里还剩半袋米，够吃上几天。窗外的天开始泛白，楼下有清运车经过的声音。",
+        "chars": 80,
+        "sentences": 4,
+        "sha256": "41f56569ebcdbbab469eeb303530632fc5fb6bacf40c90bc615b864c1f474c22"
+      },
+      {
+        "stream_set_id": "S1",
+        "gap_id": "S1-G10",
+        "after_trial_index": 10,
+        "after_trial_id": "T10",
+        "order_index": 9,
+        "text": "衣柜顶上放着一个落灰的纸箱，里面是几件很久没穿的衣服。整理的时候发现一张旧收据，字迹已经模糊。把不需要的东西挑出来放在门口，等有空再处理。房间一下子显得宽敞了不少。",
+        "chars": 82,
+        "sentences": 4,
+        "sha256": "3e1839e2c5c38b9b0c5e3c17505e8a59761ec026db01b42ed5fa4109d5fbbe4d"
+      },
+      {
+        "stream_set_id": "S1",
+        "gap_id": "S1-G11",
+        "after_trial_index": 11,
+        "after_trial_id": "T11",
+        "order_index": 10,
+        "text": "街角那家小店换了招牌，颜色比原来深一些。门口的自行车停在原地很久，车篮里落了叶子。路过的时候闻到烤红薯的味道，从旁边的推车那里散出来。再往前走过一个路口，就是常去的那片街区。",
+        "chars": 87,
+        "sentences": 4,
+        "sha256": "b1115083be2e73ad26a5d89a50a4f3dacf6519b160cf2c5447f540f3ab706d84"
+      },
+      {
+        "stream_set_id": "S1",
+        "gap_id": "S1-G12",
+        "after_trial_index": 12,
+        "after_trial_id": "T12",
+        "order_index": 11,
+        "text": "电脑的风扇声在安静的房间里显得格外清楚。桌上的键盘缝隙里落了一点碎屑，用纸巾折了个角去挑。屏幕上的窗口开得太多，光是排列就让眼睛有些累。窗外的天色已经暗下来，远处有零星的灯光。",
+        "chars": 88,
+        "sentences": 4,
+        "sha256": "2afefc001ac6930081bdba2b9d264921912a5fa50050fd9750f3061dd875c1e6"
+      },
+      {
+        "stream_set_id": "S1",
+        "gap_id": "S1-G13",
+        "after_trial_index": 13,
+        "after_trial_id": "T13",
+        "order_index": 12,
+        "text": "楼道里的公告栏贴着几张旧通知，边角被风掀起。下楼时闻到别人家里做饭的味道，从门缝里飘出来。信箱里塞着一份广告纸，被顺手放进了口袋。走到门口才发现外面在飘着小雨。",
+        "chars": 80,
+        "sentences": 4,
+        "sha256": "ec7de5b10d0c6640cad3fc7a5646401c641c17bb1e71dcc6594bd1124588ca8a"
+      },
+      {
+        "stream_set_id": "S1",
+        "gap_id": "S1-G14",
+        "after_trial_index": 14,
+        "after_trial_id": "T14",
+        "order_index": 13,
+        "text": "书架上的书按新旧混在一起，有几本已经记不清是什么时候买的。抽出一本翻了两页，又放了回去。窗台上的玻璃瓶里插着几枝干掉的植物。整个下午房间里都很安静，只有偶尔的风声。",
+        "chars": 82,
+        "sentences": 4,
+        "sha256": "e8c29c526bda02d6086110d172b4ad4a431d499d293bf89ab4cf7e6e3bb9b4c5"
+      },
+      {
+        "stream_set_id": "S1",
+        "gap_id": "S1-G15",
+        "after_trial_index": 15,
+        "after_trial_id": "T15",
+        "order_index": 14,
+        "text": "洗衣机旁边的篮子里堆着没叠的衣服，颜色各不相同。把干净的毛巾叠好放进柜子，剩下的留到下次。地面扫过之后，角落还留着一点灰。厨房里烧的水已经开了，冒着白气。",
+        "chars": 77,
+        "sentences": 4,
+        "sha256": "9c8b7eca50c1c49fd4a6bbd9520edfba22a3141430e35d86a849e6f6f8015282"
+      },
+      {
+        "stream_set_id": "S1",
+        "gap_id": "S1-G16",
+        "after_trial_index": 16,
+        "after_trial_id": "T16",
+        "order_index": 15,
+        "text": "公园长椅的木条有些松动，坐下时会发出轻微的响动。远处有孩子在跑，声音时远时近。树荫下比路上凉快一些，风穿过草地的边缘。抬头能看见几只鸟在低处飞过，很快就不见了。",
+        "chars": 80,
+        "sentences": 4,
+        "sha256": "ae86a08bb709352df882817075a6c68744bdabd6f03decaab901afdd6a300348"
+      },
+      {
+        "stream_set_id": "S1",
+        "gap_id": "S1-G17",
+        "after_trial_index": 17,
+        "after_trial_id": "T17",
+        "order_index": 16,
+        "text": "抽屉里的充电线缠在一起，理了一会儿才分开。桌上摆着一支快没水的笔，写在纸上的痕迹很淡。把几张用过的纸叠起来放到一边。窗外的影子变长了，下午快要过去。",
+        "chars": 74,
+        "sentences": 4,
+        "sha256": "ad695dc694a21830334c80d7d2a119187858b20fef1aa58b1e3e5d2a47ec7b6c"
+      }
+    ],
+    "S2": [
+      {
+        "stream_set_id": "S2",
+        "gap_id": "S2-G01",
+        "after_trial_index": 1,
+        "after_trial_id": "T01",
+        "order_index": 0,
+        "text": "冰箱门上贴着几张便条，字迹有些褪了。里面还剩半盒鸡蛋和一袋青菜。厨房的灯忽明忽暗，可能是接触不太稳。把要用的东西先摆在台面上，其余的推回原处。",
+        "chars": 71,
+        "sentences": 4,
+        "sha256": "c811db2f3e186269fb0e1f4ca14e34d9da8581d9c45c676370cf2e8788f715f3"
+      },
+      {
+        "stream_set_id": "S2",
+        "gap_id": "S2-G02",
+        "after_trial_index": 2,
+        "after_trial_id": "T02",
+        "order_index": 1,
+        "text": "窗外的雨点打在遮阳棚上，声音一阵密一阵疏。楼道里的地面被踩出深浅不一的印子。把鞋放在门口晾着，鞋底沾了一点泥。屋里的空气有些潮湿，气味很淡。",
+        "chars": 70,
+        "sentences": 4,
+        "sha256": "a0d63a5eb619eb09242cebb42c66d33fd7eaa91479adbed67d5af45678aad8e7"
+      },
+      {
+        "stream_set_id": "S2",
+        "gap_id": "S2-G03",
+        "after_trial_index": 3,
+        "after_trial_id": "T03",
+        "order_index": 2,
+        "text": "手机在桌上震动了一下，屏幕亮起又暗下去。桌角的台灯照着一小片地方，光晕的边缘有点发黄。杯子里的茶已经凉透，叶子沉在底下。坐着没动，只是听着外面的动静。",
+        "chars": 75,
+        "sentences": 4,
+        "sha256": "4dd111023bd706c27e359d891ff1eb65ce0fd7850a53512604626d62ea16447e"
+      },
+      {
+        "stream_set_id": "S2",
+        "gap_id": "S2-G04",
+        "after_trial_index": 4,
+        "after_trial_id": "T04",
+        "order_index": 3,
+        "text": "早上的市场里人渐渐多起来，摊位上摆着刚到的蔬菜。卖豆腐的那家门前排了几个人，说话声不大。挑了些青菜装在袋子里，又顺手带了一小把葱。往回走的时候太阳已经升高了。",
+        "chars": 79,
+        "sentences": 4,
+        "sha256": "7f6cfdaf41dc1449ecfdb2e7330cfbc2490ffd265a5a202030c54b57f77202b1"
+      },
+      {
+        "stream_set_id": "S2",
+        "gap_id": "S2-G05",
+        "after_trial_index": 5,
+        "after_trial_id": "T05",
+        "order_index": 4,
+        "text": "阳台上的晾衣绳被风吹得轻轻晃动，夹子碰在一起发出细响。几件衬衫被吹得鼓起来，下摆翻动着。把快要干的收进来，剩下的继续晾着。远处的天上有几片形状不规则的云。",
+        "chars": 77,
+        "sentences": 4,
+        "sha256": "7e2aa013b6dcc2e995fb24e951f9eee7b40f71a8687611ba53d39446127336be"
+      },
+      {
+        "stream_set_id": "S2",
+        "gap_id": "S2-G06",
+        "after_trial_index": 6,
+        "after_trial_id": "T06",
+        "order_index": 5,
+        "text": "书架最下层放着几本很久没翻过的册子，书脊上落了灰。抽出其中一本，里面夹着一张旧车票。看完又把它放回去，位置和原来一样。房间里只开了台灯，其余地方都暗着。",
+        "chars": 76,
+        "sentences": 4,
+        "sha256": "97cb93975a06630fcb6b38ac9bc24c1a82b88fa870ff0c9fc1ef749f93b830c4"
+      },
+      {
+        "stream_set_id": "S2",
+        "gap_id": "S2-G07",
+        "after_trial_index": 7,
+        "after_trial_id": "T07",
+        "order_index": 6,
+        "text": "楼道尽头的电梯到了，门开合的声音在空旷处有些响。进来之后按下了要去的层，显示慢慢跳。电梯里的镜子映出模糊的影子。到站之后门再次打开，走廊的灯光很白。",
+        "chars": 74,
+        "sentences": 4,
+        "sha256": "cd308225adc0b6cc75ff7534b4ea7926dd408a10372a9a8905147993cf43ada2"
+      },
+      {
+        "stream_set_id": "S2",
+        "gap_id": "S2-G08",
+        "after_trial_index": 8,
+        "after_trial_id": "T08",
+        "order_index": 7,
+        "text": "厨房的抽油烟机刚停，屋里还留着一丝炒菜的味道。灶台上放着刚用过的锅，锅底的水还没干。把台面擦了一遍，抹布挂回原位。窗外的天色已经完全暗下来，路灯亮着。",
+        "chars": 75,
+        "sentences": 4,
+        "sha256": "9c9e8acacf43446dcac83ad388d7fb01502e6210af894ca2823472f6b41bd87f"
+      },
+      {
+        "stream_set_id": "S2",
+        "gap_id": "S2-G09",
+        "after_trial_index": 9,
+        "after_trial_id": "T09",
+        "order_index": 8,
+        "text": "桌上的纸张被风吹起一角，又落回去。把窗户关小了些，声音就轻了。笔筒里的东西被碰得歪倒，顺手扶正。时钟的指针走过一格，房间里安静了下来。",
+        "chars": 67,
+        "sentences": 4,
+        "sha256": "d9afbd79da789f48571e3310501d2aa2353e14eea0a6e6b7eb996c3e48c796d4"
+      },
+      {
+        "stream_set_id": "S2",
+        "gap_id": "S2-G10",
+        "after_trial_index": 10,
+        "after_trial_id": "T10",
+        "order_index": 9,
+        "text": "下午的咖啡馆里放着很轻的背景音乐，几乎听不清旋律。邻座的人在翻一本杂志，纸页翻动的声音断断续续。杯子上的热气散开，又慢慢消失。窗外的行人不紧不慢地走过。",
+        "chars": 76,
+        "sentences": 4,
+        "sha256": "d43581b320da6d3cc317ff8fab01b485b803fb5eb098ec0574b16c30bc853e51"
+      },
+      {
+        "stream_set_id": "S2",
+        "gap_id": "S2-G11",
+        "after_trial_index": 11,
+        "after_trial_id": "T11",
+        "order_index": 10,
+        "text": "衣柜里的衣架挤在一起，找一件衣服要拨开好几件。把不常穿的分出来叠好，放回上面的隔板。柜门关上的时候有轻微的碰撞声。房间里的空气有一点樟木的味道。",
+        "chars": 72,
+        "sentences": 4,
+        "sha256": "4eab3766deb77441b2c9c4a26ca7fb66595f01fbd139aff1a1c4d9f0d47b0684"
+      },
+      {
+        "stream_set_id": "S2",
+        "gap_id": "S2-G12",
+        "after_trial_index": 12,
+        "after_trial_id": "T12",
+        "order_index": 11,
+        "text": "院子里的那只猫趴在墙头上，很少动一下。风把树叶吹得翻过来，露出颜色更浅的一面。晾着的衣服慢慢干了，边缘有些发硬。太阳移过屋脊，影子落到了台阶上。",
+        "chars": 72,
+        "sentences": 4,
+        "sha256": "5b670bf8046927d519c7ea0ca0f3e68ac90e7488946673b1ccb5f0c4828b1a22"
+      },
+      {
+        "stream_set_id": "S2",
+        "gap_id": "S2-G13",
+        "after_trial_index": 13,
+        "after_trial_id": "T13",
+        "order_index": 12,
+        "text": "手机里的相册翻到很久以前的几张，画面有些模糊。看了一会儿就返回了列表。把不需要的删掉了几张，剩下的留着。窗外开始有断续的虫鸣，天已经黑透了。",
+        "chars": 70,
+        "sentences": 4,
+        "sha256": "6fdfa9e3384c435033bab99a3dececf9d1592b6acf5c22084c8fbca61e9c2f34"
+      },
+      {
+        "stream_set_id": "S2",
+        "gap_id": "S2-G14",
+        "after_trial_index": 14,
+        "after_trial_id": "T14",
+        "order_index": 13,
+        "text": "水龙头拧到一半的时候会发出轻微的响声，水流不太稳。把池子里的碗洗了，摆在架子上沥水。地面溅到了几点水，用拖布擦过。手里的抹布被拧干挂起来。",
+        "chars": 69,
+        "sentences": 4,
+        "sha256": "17beff21741e8660188a350956cfbfea18fbdb4d5c6dc132788d006cd453bdaa"
+      },
+      {
+        "stream_set_id": "S2",
+        "gap_id": "S2-G15",
+        "after_trial_index": 15,
+        "after_trial_id": "T15",
+        "order_index": 14,
+        "text": "楼下的店铺关了门，卷帘门落到底的声音传上来。街上的车少了很多，路灯把路面照成一片浅色。把窗关上，屋里的声音一下子小了。桌上那杯水还剩下底。",
+        "chars": 69,
+        "sentences": 4,
+        "sha256": "51c453a0ce8b2671bf21d7f58e28106baecaf27361886aa1e88ea8f727fff99f"
+      },
+      {
+        "stream_set_id": "S2",
+        "gap_id": "S2-G16",
+        "after_trial_index": 16,
+        "after_trial_id": "T16",
+        "order_index": 15,
+        "text": "书架旁的椅子上搭着一件外套，口袋里翻出一张折起来的纸。展开看了几眼，内容已经不重要。把它叠好放回口袋。房间里的光从一侧移到另一侧。",
+        "chars": 65,
+        "sentences": 4,
+        "sha256": "64788ee997ad839a48f1c8533b0bf6fbaa3b258c9f539e8ba073e226bf44faf8"
+      },
+      {
+        "stream_set_id": "S2",
+        "gap_id": "S2-G17",
+        "after_trial_index": 17,
+        "after_trial_id": "T17",
+        "order_index": 16,
+        "text": "冰箱压缩机启动的时候，厨房里会有一阵低低的响动。把冷藏室的东西重新摆放了一下，前面空出了位置。剩下的一点菜盛在盒子里。关上门的时候吸了一下，声音很闷。",
+        "chars": 75,
+        "sentences": 4,
+        "sha256": "f8e046b988234495cec4f1dc4f3cf25aef2329029e45279a50839026b75c41c2"
+      }
+    ],
+    "S3": [
+      {
+        "stream_set_id": "S3",
+        "gap_id": "S3-G01",
+        "after_trial_index": 1,
+        "after_trial_id": "T01",
+        "order_index": 0,
+        "text": "桌面上摊着几张没用的纸，边角被压得卷起来。把其中一张翻过来，背面还写着几行字。看了看就放到一边，留着以后当草稿。窗外的天色是灰白的，看不出时间。",
+        "chars": 72,
+        "sentences": 4,
+        "sha256": "68f43c26063c53d455a242622d59850bc6ec705532ab87e567981668343a3c27"
+      },
+      {
+        "stream_set_id": "S3",
+        "gap_id": "S3-G02",
+        "after_trial_index": 2,
+        "after_trial_id": "T02",
+        "order_index": 1,
+        "text": "走廊里有脚步声靠近又走远，像是有人去找别的房间。饮水机偶尔发出咕噜的声音。把杯子接满水放回桌上，杯壁上很快起了一层小水珠。屋里没有开大灯。",
+        "chars": 69,
+        "sentences": 4,
+        "sha256": "42e113ee42cc1c2ca60a52fe8e6609f54e42463510f32d380029a58f7fb60999"
+      },
+      {
+        "stream_set_id": "S3",
+        "gap_id": "S3-G03",
+        "after_trial_index": 3,
+        "after_trial_id": "T03",
+        "order_index": 2,
+        "text": "阳台的推拉门被风吹得轻轻碰了一下框。外面的空气比屋里凉，能闻到一点土的味道。把放在外面的花盆挪到靠墙的位置。云层压得比较低，看不出要晴还是要下。",
+        "chars": 72,
+        "sentences": 4,
+        "sha256": "5285aeb95283ebe7ae813a31bac3929510b40292107cb449c059a397815d17b2"
+      },
+      {
+        "stream_set_id": "S3",
+        "gap_id": "S3-G04",
+        "after_trial_index": 4,
+        "after_trial_id": "T04",
+        "order_index": 3,
+        "text": "抽屉拉开的时候卡了一下，里面的东西被挤得挪了位。理出几支笔和一个旧本子，其余的推回去。把本子翻到空白的页，放在手边。桌面上的影子跟着手动。",
+        "chars": 69,
+        "sentences": 4,
+        "sha256": "d328df2afd2047a331556cc3a2e282ba6efcf1b2c3d6ab75946629c5c421e942"
+      },
+      {
+        "stream_set_id": "S3",
+        "gap_id": "S3-G05",
+        "after_trial_index": 5,
+        "after_trial_id": "T05",
+        "order_index": 4,
+        "text": "早上的路边有几家铺子刚开门，门轴转动的声音很轻。卖早餐的推车旁有人站着等，热气从锅里升起来。走过去的时候闻到一点咸味。街口的信号灯换了颜色。",
+        "chars": 70,
+        "sentences": 4,
+        "sha256": "31d1b674d7f702deb3bc93fdfc5507d8cbf70222bdd82b03ae166a4163120ffd"
+      },
+      {
+        "stream_set_id": "S3",
+        "gap_id": "S3-G06",
+        "after_trial_index": 6,
+        "after_trial_id": "T06",
+        "order_index": 5,
+        "text": "书架上的书有的歪了，把靠边的几本扶正。抽出的一本里掉出一张纸条，上面写着几个字。读完夹回原来的地方。房间里的空气有点干，指节碰到纸页会响。",
+        "chars": 69,
+        "sentences": 4,
+        "sha256": "0cd5634cbd2c5971ebac491280060ae22c026f1dbe5389aa52adfb99af528f97"
+      },
+      {
+        "stream_set_id": "S3",
+        "gap_id": "S3-G07",
+        "after_trial_index": 7,
+        "after_trial_id": "T07",
+        "order_index": 6,
+        "text": "水壶烧开之后自动断电，屋里安静下来。把水倒进杯子，热气往上飘了一层。台面上留着几滴水，用布擦掉。窗外有鸟叫，声音穿过了玻璃。",
+        "chars": 62,
+        "sentences": 4,
+        "sha256": "7504aff4874e4e4b6e71ed3792756e17139e36c8a9e32d20e30617fa6ee8f378"
+      },
+      {
+        "stream_set_id": "S3",
+        "gap_id": "S3-G08",
+        "after_trial_index": 8,
+        "after_trial_id": "T08",
+        "order_index": 7,
+        "text": "楼下的孩子在院子里玩，说话声一阵一阵传上来。把窗户开了一条缝，风就进来了。桌上轻的纸被吹动，用手压住。天色还亮着，但光已经不那么刺眼。",
+        "chars": 67,
+        "sentences": 4,
+        "sha256": "71bf6684b2a810de6f06db21dfa6c10c7f4690ff6a4d63bb838fe84951e0cfec"
+      },
+      {
+        "stream_set_id": "S3",
+        "gap_id": "S3-G09",
+        "after_trial_index": 9,
+        "after_trial_id": "T09",
+        "order_index": 8,
+        "text": "电脑开机的时候风扇响了一阵，然后平缓下来。桌面上的图标排得很密，用起来要点好几次。把不用的窗口一个个关掉。屏幕暗下去之后，屋里显得比刚才黑。",
+        "chars": 70,
+        "sentences": 4,
+        "sha256": "4b0cacef731cf867909488ebf2a7ab9e6aa59559782107f953e2be37e1d8fca0"
+      },
+      {
+        "stream_set_id": "S3",
+        "gap_id": "S3-G10",
+        "after_trial_index": 10,
+        "after_trial_id": "T10",
+        "order_index": 9,
+        "text": "鞋柜里的鞋摆放得不太整齐，把常穿的放在靠外的位置。鞋底沾的泥在门口蹭掉了。换下来的那双拿到阳台去晒。地面上留下一点灰，用纸巾擦掉。",
+        "chars": 65,
+        "sentences": 4,
+        "sha256": "ef4308825676ae278187fedea8b0145a93d5015609a2e4ab109eb1fb289710c8"
+      },
+      {
+        "stream_set_id": "S3",
+        "gap_id": "S3-G11",
+        "after_trial_index": 11,
+        "after_trial_id": "T11",
+        "order_index": 10,
+        "text": "咖啡机工作的时候声音很响，结束后会滴一会儿。杯子放在托盘上，热气一直往上。把用过的滤纸丢掉，水槽里冲了一下。屋里留着一股深色的味道。",
+        "chars": 66,
+        "sentences": 4,
+        "sha256": "9b22b8356a4b81969fca0bdc05714a24f20555e035dddaddf99d2861b43efd3c"
+      },
+      {
+        "stream_set_id": "S3",
+        "gap_id": "S3-G12",
+        "after_trial_index": 12,
+        "after_trial_id": "T12",
+        "order_index": 11,
+        "text": "公园里的路上有人推着车慢慢走，轮子在石板上发出响动。树下的长椅空着，有几片叶子落在上面。走过去的时候能听见草叶摩擦的声音。天色在不知不觉中暗了一些。",
+        "chars": 74,
+        "sentences": 4,
+        "sha256": "8966fc58ac1cf4aa524c1fdbb43ef27fb34b49615359e39209f904f79a4f9251"
+      },
+      {
+        "stream_set_id": "S3",
+        "gap_id": "S3-G13",
+        "after_trial_index": 13,
+        "after_trial_id": "T13",
+        "order_index": 12,
+        "text": "冰箱里剩的东西不多，凑起来还能做一顿。把该扔的挑出来，其余的归到一起。冷藏室的门关了几次才关严。台面上留下一点水，用布擦干净。",
+        "chars": 63,
+        "sentences": 4,
+        "sha256": "b95ab08b7b32284b1b4449b06c10fd635b723f2e11680997b08093ea6cc9b981"
+      },
+      {
+        "stream_set_id": "S3",
+        "gap_id": "S3-G14",
+        "after_trial_index": 14,
+        "after_trial_id": "T14",
+        "order_index": 13,
+        "text": "桌上的台灯角度不太对，光落在纸的边缘。调了一下，影子换到了另一侧。把看完的几页折好放到一边。窗外的路灯已经亮了，颜色是暖的。",
+        "chars": 62,
+        "sentences": 4,
+        "sha256": "33a9a41ce1996f09cd6f98b4c78d6af36db87e628b79121ce374074b110e59d9"
+      },
+      {
+        "stream_set_id": "S3",
+        "gap_id": "S3-G15",
+        "after_trial_index": 15,
+        "after_trial_id": "T15",
+        "order_index": 14,
+        "text": "门口的地垫被踩歪了，顺手把它挪回去。钥匙放在旁边的小盘子里，碰出清脆的声响。走廊的灯过了很久才自动熄灭。屋里只剩下窗外的光。",
+        "chars": 62,
+        "sentences": 4,
+        "sha256": "2e737c27398de073e4a9905f3acb9395f77f7286bf6c43e00ae5f422ee1a3d18"
+      },
+      {
+        "stream_set_id": "S3",
+        "gap_id": "S3-G16",
+        "after_trial_index": 16,
+        "after_trial_id": "T16",
+        "order_index": 15,
+        "text": "楼下的车发动了又停，声音反复了几次才走远。把窗帘拉开一半，室内的光更亮了些。桌上的水杯映出一点亮。院子里有人在说话，很快就散了。",
+        "chars": 64,
+        "sentences": 4,
+        "sha256": "470c8a3a4203bc23f2b9ca5f2a990939473b989c17a9d5b09f6143a7a9aa3172"
+      },
+      {
+        "stream_set_id": "S3",
+        "gap_id": "S3-G17",
+        "after_trial_index": 17,
+        "after_trial_id": "T17",
+        "order_index": 16,
+        "text": "柜子深处的纸箱搬出来的时候扬起一点灰。里面是几件旧的物件，有几件已经不记得用途。挑出还需要的放在一边，其余留在箱子里。房间显得空了一点。",
+        "chars": 68,
+        "sentences": 4,
+        "sha256": "e1d03ef5891a5539b72221c257ce8e9adf701b6b814d7ba0d9aa301a65cf8048"
+      }
+    ]
+  },
+  "allocation": [
+    {
+      "session_id": "C4-S01",
+      "condition": "C4",
+      "arrangement": "A1",
+      "stream_set_id": "S1"
+    },
+    {
+      "session_id": "C4-S02",
+      "condition": "C4",
+      "arrangement": "A2",
+      "stream_set_id": "S2"
+    },
+    {
+      "session_id": "C4-S03",
+      "condition": "C4",
+      "arrangement": "A3",
+      "stream_set_id": "S3"
+    },
+    {
+      "session_id": "C4-S04",
+      "condition": "C4",
+      "arrangement": "A1",
+      "stream_set_id": "S2"
+    },
+    {
+      "session_id": "C4-S05",
+      "condition": "C4",
+      "arrangement": "A2",
+      "stream_set_id": "S3"
+    },
+    {
+      "session_id": "C4-S06",
+      "condition": "C4",
+      "arrangement": "A3",
+      "stream_set_id": "S1"
+    },
+    {
+      "session_id": "C4-S07",
+      "condition": "C4",
+      "arrangement": "A1",
+      "stream_set_id": "S3"
+    },
+    {
+      "session_id": "C4-S08",
+      "condition": "C4",
+      "arrangement": "A2",
+      "stream_set_id": "S1"
+    },
+    {
+      "session_id": "C4-S09",
+      "condition": "C4",
+      "arrangement": "A3",
+      "stream_set_id": "S2"
+    },
+    {
+      "session_id": "C4-S10",
+      "condition": "C4",
+      "arrangement": "A1",
+      "stream_set_id": "S1"
+    },
+    {
+      "session_id": "C4-S11",
+      "condition": "C4",
+      "arrangement": "A2",
+      "stream_set_id": "S2"
+    },
+    {
+      "session_id": "C4-S12",
+      "condition": "C4",
+      "arrangement": "A3",
+      "stream_set_id": "S3"
+    }
+  ],
+  "allocation_note": "Four C4 sessions per stream, allocated independently of the trial arrangement; the arrangement x stream cross table is recorded in configs/design.json and is deliberately not one-to-one."
+}
