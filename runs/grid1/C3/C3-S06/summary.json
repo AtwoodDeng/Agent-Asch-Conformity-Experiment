@@ -1,0 +1,17 @@
+{
+  "session_id": "C3-S06",
+  "condition": "C3",
+  "arrangement": "A3",
+  "n_trials": 18,
+  "n_critical": 12,
+  "n_neutral": 6,
+  "n_parsed": 18,
+  "n_missing": 0,
+  "critical_error_rate": 0.3333333333333333,
+  "critical_correct_rate": 0.08333333333333333,
+  "neutral_correct_rate": 0.6666666666666666,
+  "overall_correct_rate": 0.2777777777777778,
+  "critical_error_count": 4,
+  "critical_correct_count": 1,
+  "gap_chars_total": 0
+}

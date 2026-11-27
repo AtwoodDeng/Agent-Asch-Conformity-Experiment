@@ -1,0 +1,17 @@
+{
+  "session_id": "C2-S11",
+  "condition": "C2",
+  "arrangement": "A2",
+  "n_trials": 18,
+  "n_critical": 12,
+  "n_neutral": 6,
+  "n_parsed": 18,
+  "n_missing": 0,
+  "critical_error_rate": 0.08333333333333333,
+  "critical_correct_rate": 0.9166666666666666,
+  "neutral_correct_rate": 1.0,
+  "overall_correct_rate": 0.9444444444444444,
+  "critical_error_count": 1,
+  "critical_correct_count": 11,
+  "gap_chars_total": 0
+}

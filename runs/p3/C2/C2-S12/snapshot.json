@@ -1,0 +1,731 @@
+{
+  "session": {
+    "session_id": "C2-S12",
+    "condition": "C2",
+    "index": 11,
+    "arrangement": "A3",
+    "seed": 22853795,
+    "subject_seat": 7,
+    "confederate_seats": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "dissenter_seat": 6,
+    "stream_set": null,
+    "n_trials": 18
+  },
+  "steps_completed": 18,
+  "gaps_shown": 0,
+  "record": {
+    "trials": {
+      "1": {
+        "trial_id": "T01",
+        "speeches": [
+          {
+            "seat": 1,
+            "answer": "C",
+            "role": "confederate"
+          },
+          {
+            "seat": 2,
+            "answer": "C",
+            "role": "confederate"
+          },
+          {
+            "seat": 3,
+            "answer": "C",
+            "role": "confederate"
+          },
+          {
+            "seat": 4,
+            "answer": "C",
+            "role": "confederate"
+          },
+          {
+            "seat": 5,
+            "answer": "C",
+            "role": "confederate"
+          },
+          {
+            "seat": 6,
+            "answer": "C",
+            "role": "confederate"
+          }
+        ],
+        "subject_answer": "C",
+        "subject_raw": "C",
+        "subject_source": "llm"
+      },
+      "2": {
+        "trial_id": "T02",
+        "speeches": [
+          {
+            "seat": 1,
+            "answer": "A",
+            "role": "confederate"
+          },
+          {
+            "seat": 2,
+            "answer": "A",
+            "role": "confederate"
+          },
+          {
+            "seat": 3,
+            "answer": "A",
+            "role": "confederate"
+          },
+          {
+            "seat": 4,
+            "answer": "A",
+            "role": "confederate"
+          },
+          {
+            "seat": 5,
+            "answer": "A",
+            "role": "confederate"
+          },
+          {
+            "seat": 6,
+            "answer": "A",
+            "role": "confederate"
+          }
+        ],
+        "subject_answer": "A",
+        "subject_raw": "A",
+        "subject_source": "llm"
+      },
+      "3": {
+        "trial_id": "T03",
+        "speeches": [
+          {
+            "seat": 1,
+            "answer": "A",
+            "role": "confederate"
+          },
+          {
+            "seat": 2,
+            "answer": "A",
+            "role": "confederate"
+          },
+          {
+            "seat": 3,
+            "answer": "A",
+            "role": "confederate"
+          },
+          {
+            "seat": 4,
+            "answer": "A",
+            "role": "confederate"
+          },
+          {
+            "seat": 5,
+            "answer": "A",
+            "role": "confederate"
+          },
+          {
+            "seat": 6,
+            "answer": "C",
+            "role": "confederate"
+          }
+        ],
+        "subject_answer": "C",
+        "subject_raw": "C",
+        "subject_source": "llm"
+      },
+      "4": {
+        "trial_id": "T04",
+        "speeches": [
+          {
+            "seat": 1,
+            "answer": "C",
+            "role": "confederate"
+          },
+          {
+            "seat": 2,
+            "answer": "C",
+            "role": "confederate"
+          },
+          {
+            "seat": 3,
+            "answer": "C",
+            "role": "confederate"
+          },
+          {
+            "seat": 4,
+            "answer": "C",
+            "role": "confederate"
+          },
+          {
+            "seat": 5,
+            "answer": "C",
+            "role": "confederate"
+          },
+          {
+            "seat": 6,
+            "answer": "A",
+            "role": "confederate"
+          }
+        ],
+        "subject_answer": "A",
+        "subject_raw": "A",
+        "subject_source": "llm"
+      },
+      "5": {
+        "trial_id": "T05",
+        "speeches": [
+          {
+            "seat": 1,
+            "answer": "B",
+            "role": "confederate"
+          },
+          {
+            "seat": 2,
+            "answer": "B",
+            "role": "confederate"
+          },
+          {
+            "seat": 3,
+            "answer": "B",
+            "role": "confederate"
+          },
+          {
+            "seat": 4,
+            "answer": "B",
+            "role": "confederate"
+          },
+          {
+            "seat": 5,
+            "answer": "B",
+            "role": "confederate"
+          },
+          {
+            "seat": 6,
+            "answer": "B",
+            "role": "confederate"
+          }
+        ],
+        "subject_answer": "B",
+        "subject_raw": "B",
+        "subject_source": "llm"
+      },
+      "6": {
+        "trial_id": "T06",
+        "speeches": [
+          {
+            "seat": 1,
+            "answer": "C",
+            "role": "confederate"
+          },
+          {
+            "seat": 2,
+            "answer": "C",
+            "role": "confederate"
+          },
+          {
+            "seat": 3,
+            "answer": "C",
+            "role": "confederate"
+          },
+          {
+            "seat": 4,
+            "answer": "C",
+            "role": "confederate"
+          },
+          {
+            "seat": 5,
+            "answer": "C",
+            "role": "confederate"
+          },
+          {
+            "seat": 6,
+            "answer": "B",
+            "role": "confederate"
+          }
+        ],
+        "subject_answer": "B",
+        "subject_raw": "B",
+        "subject_source": "llm"
+      },
+      "7": {
+        "trial_id": "T07",
+        "speeches": [
+          {
+            "seat": 1,
+            "answer": "B",
+            "role": "confederate"
+          },
+          {
+            "seat": 2,
+            "answer": "B",
+            "role": "confederate"
+          },
+          {
+            "seat": 3,
+            "answer": "B",
+            "role": "confederate"
+          },
+          {
+            "seat": 4,
+            "answer": "B",
+            "role": "confederate"
+          },
+          {
+            "seat": 5,
+            "answer": "B",
+            "role": "confederate"
+          },
+          {
+            "seat": 6,
+            "answer": "C",
+            "role": "confederate"
+          }
+        ],
+        "subject_answer": "C",
+        "subject_raw": "C",
+        "subject_source": "llm"
+      },
+      "8": {
+        "trial_id": "T08",
+        "speeches": [
+          {
+            "seat": 1,
+            "answer": "B",
+            "role": "confederate"
+          },
+          {
+            "seat": 2,
+            "answer": "B",
+            "role": "confederate"
+          },
+          {
+            "seat": 3,
+            "answer": "B",
+            "role": "confederate"
+          },
+          {
+            "seat": 4,
+            "answer": "B",
+            "role": "confederate"
+          },
+          {
+            "seat": 5,
+            "answer": "B",
+            "role": "confederate"
+          },
+          {
+            "seat": 6,
+            "answer": "A",
+            "role": "confederate"
+          }
+        ],
+        "subject_answer": "A",
+        "subject_raw": "A",
+        "subject_source": "llm"
+      },
+      "9": {
+        "trial_id": "T09",
+        "speeches": [
+          {
+            "seat": 1,
+            "answer": "A",
+            "role": "confederate"
+          },
+          {
+            "seat": 2,
+            "answer": "A",
+            "role": "confederate"
+          },
+          {
+            "seat": 3,
+            "answer": "A",
+            "role": "confederate"
+          },
+          {
+            "seat": 4,
+            "answer": "A",
+            "role": "confederate"
+          },
+          {
+            "seat": 5,
+            "answer": "A",
+            "role": "confederate"
+          },
+          {
+            "seat": 6,
+            "answer": "B",
+            "role": "confederate"
+          }
+        ],
+        "subject_answer": "B",
+        "subject_raw": "B",
+        "subject_source": "llm"
+      },
+      "10": {
+        "trial_id": "T10",
+        "speeches": [
+          {
+            "seat": 1,
+            "answer": "C",
+            "role": "confederate"
+          },
+          {
+            "seat": 2,
+            "answer": "C",
+            "role": "confederate"
+          },
+          {
+            "seat": 3,
+            "answer": "C",
+            "role": "confederate"
+          },
+          {
+            "seat": 4,
+            "answer": "C",
+            "role": "confederate"
+          },
+          {
+            "seat": 5,
+            "answer": "C",
+            "role": "confederate"
+          },
+          {
+            "seat": 6,
+            "answer": "C",
+            "role": "confederate"
+          }
+        ],
+        "subject_answer": "C",
+        "subject_raw": "C",
+        "subject_source": "llm"
+      },
+      "11": {
+        "trial_id": "T11",
+        "speeches": [
+          {
+            "seat": 1,
+            "answer": "A",
+            "role": "confederate"
+          },
+          {
+            "seat": 2,
+            "answer": "A",
+            "role": "confederate"
+          },
+          {
+            "seat": 3,
+            "answer": "A",
+            "role": "confederate"
+          },
+          {
+            "seat": 4,
+            "answer": "A",
+            "role": "confederate"
+          },
+          {
+            "seat": 5,
+            "answer": "A",
+            "role": "confederate"
+          },
+          {
+            "seat": 6,
+            "answer": "A",
+            "role": "confederate"
+          }
+        ],
+        "subject_answer": "A",
+        "subject_raw": "A",
+        "subject_source": "llm"
+      },
+      "12": {
+        "trial_id": "T12",
+        "speeches": [
+          {
+            "seat": 1,
+            "answer": "A",
+            "role": "confederate"
+          },
+          {
+            "seat": 2,
+            "answer": "A",
+            "role": "confederate"
+          },
+          {
+            "seat": 3,
+            "answer": "A",
+            "role": "confederate"
+          },
+          {
+            "seat": 4,
+            "answer": "A",
+            "role": "confederate"
+          },
+          {
+            "seat": 5,
+            "answer": "A",
+            "role": "confederate"
+          },
+          {
+            "seat": 6,
+            "answer": "C",
+            "role": "confederate"
+          }
+        ],
+        "subject_answer": "C",
+        "subject_raw": "C",
+        "subject_source": "llm"
+      },
+      "13": {
+        "trial_id": "T13",
+        "speeches": [
+          {
+            "seat": 1,
+            "answer": "C",
+            "role": "confederate"
+          },
+          {
+            "seat": 2,
+            "answer": "C",
+            "role": "confederate"
+          },
+          {
+            "seat": 3,
+            "answer": "C",
+            "role": "confederate"
+          },
+          {
+            "seat": 4,
+            "answer": "C",
+            "role": "confederate"
+          },
+          {
+            "seat": 5,
+            "answer": "C",
+            "role": "confederate"
+          },
+          {
+            "seat": 6,
+            "answer": "A",
+            "role": "confederate"
+          }
+        ],
+        "subject_answer": "A",
+        "subject_raw": "A",
+        "subject_source": "llm"
+      },
+      "14": {
+        "trial_id": "T14",
+        "speeches": [
+          {
+            "seat": 1,
+            "answer": "B",
+            "role": "confederate"
+          },
+          {
+            "seat": 2,
+            "answer": "B",
+            "role": "confederate"
+          },
+          {
+            "seat": 3,
+            "answer": "B",
+            "role": "confederate"
+          },
+          {
+            "seat": 4,
+            "answer": "B",
+            "role": "confederate"
+          },
+          {
+            "seat": 5,
+            "answer": "B",
+            "role": "confederate"
+          },
+          {
+            "seat": 6,
+            "answer": "B",
+            "role": "confederate"
+          }
+        ],
+        "subject_answer": "B",
+        "subject_raw": "B",
+        "subject_source": "llm"
+      },
+      "15": {
+        "trial_id": "T15",
+        "speeches": [
+          {
+            "seat": 1,
+            "answer": "A",
+            "role": "confederate"
+          },
+          {
+            "seat": 2,
+            "answer": "A",
+            "role": "confederate"
+          },
+          {
+            "seat": 3,
+            "answer": "A",
+            "role": "confederate"
+          },
+          {
+            "seat": 4,
+            "answer": "A",
+            "role": "confederate"
+          },
+          {
+            "seat": 5,
+            "answer": "A",
+            "role": "confederate"
+          },
+          {
+            "seat": 6,
+            "answer": "B",
+            "role": "confederate"
+          }
+        ],
+        "subject_answer": "B",
+        "subject_raw": "B",
+        "subject_source": "llm"
+      },
+      "16": {
+        "trial_id": "T16",
+        "speeches": [
+          {
+            "seat": 1,
+            "answer": "B",
+            "role": "confederate"
+          },
+          {
+            "seat": 2,
+            "answer": "B",
+            "role": "confederate"
+          },
+          {
+            "seat": 3,
+            "answer": "B",
+            "role": "confederate"
+          },
+          {
+            "seat": 4,
+            "answer": "B",
+            "role": "confederate"
+          },
+          {
+            "seat": 5,
+            "answer": "B",
+            "role": "confederate"
+          },
+          {
+            "seat": 6,
+            "answer": "C",
+            "role": "confederate"
+          }
+        ],
+        "subject_answer": "C",
+        "subject_raw": "C",
+        "subject_source": "llm"
+      },
+      "17": {
+        "trial_id": "T17",
+        "speeches": [
+          {
+            "seat": 1,
+            "answer": "B",
+            "role": "confederate"
+          },
+          {
+            "seat": 2,
+            "answer": "B",
+            "role": "confederate"
+          },
+          {
+            "seat": 3,
+            "answer": "B",
+            "role": "confederate"
+          },
+          {
+            "seat": 4,
+            "answer": "B",
+            "role": "confederate"
+          },
+          {
+            "seat": 5,
+            "answer": "B",
+            "role": "confederate"
+          },
+          {
+            "seat": 6,
+            "answer": "A",
+            "role": "confederate"
+          }
+        ],
+        "subject_answer": "A",
+        "subject_raw": "A",
+        "subject_source": "llm"
+      },
+      "18": {
+        "trial_id": "T18",
+        "speeches": [
+          {
+            "seat": 1,
+            "answer": "C",
+            "role": "confederate"
+          },
+          {
+            "seat": 2,
+            "answer": "C",
+            "role": "confederate"
+          },
+          {
+            "seat": 3,
+            "answer": "C",
+            "role": "confederate"
+          },
+          {
+            "seat": 4,
+            "answer": "C",
+            "role": "confederate"
+          },
+          {
+            "seat": 5,
+            "answer": "C",
+            "role": "confederate"
+          },
+          {
+            "seat": 6,
+            "answer": "B",
+            "role": "confederate"
+          }
+        ],
+        "subject_answer": "B",
+        "subject_raw": "B",
+        "subject_source": "llm"
+      }
+    },
+    "gaps": {}
+  },
+  "history_entries": 18,
+  "history_chars": 1881,
+  "scripted_seats": [
+    "P01",
+    "P02",
+    "P03",
+    "P04",
+    "P05",
+    "P06"
+  ],
+  "model": {
+    "llm_kind": "openai",
+    "model": "gpt-5.6-sol",
+    "scripted_policy": null,
+    "calls": 18,
+    "fallbacks": 0,
+    "fallback_rate": 0.0,
+    "parse_failures": []
+  }
+}

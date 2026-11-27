@@ -1,0 +1,17 @@
+{
+  "session_id": "C4-S12",
+  "condition": "C4",
+  "arrangement": "A3",
+  "n_trials": 18,
+  "n_critical": 12,
+  "n_neutral": 6,
+  "n_parsed": 18,
+  "n_missing": 0,
+  "critical_error_rate": 0.25,
+  "critical_correct_rate": 0.25,
+  "neutral_correct_rate": 0.0,
+  "overall_correct_rate": 0.16666666666666666,
+  "critical_error_count": 3,
+  "critical_correct_count": 3,
+  "gap_chars_total": 1144
+}

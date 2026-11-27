@@ -1,0 +1,523 @@
+{
+  "run_dir": "runs/p2_pilot",
+  "label": "engine run",
+  "driver": "run_via_engine",
+  "llm_kind": "openai",
+  "model": null,
+  "n_sessions": 10,
+  "conditions": {
+    "C0": {
+      "condition": "C0",
+      "n_sessions": 2,
+      "n_judgements": 36,
+      "n_critical": 24,
+      "mean_critical_error_rate": 0.0,
+      "sd_critical_error_rate": 0.0,
+      "min_critical_error_rate": 0.0,
+      "max_critical_error_rate": 0.0,
+      "mean_neutral_correct_rate": 1.0,
+      "mean_parse_rate": 1.0,
+      "pooled_critical_error_rate": 0.0,
+      "note": "mean_critical_error_rate is the session-mean of session rates; pooled_critical_error_rate is the trial-weighted rate and is NOT the primary estimate"
+    },
+    "C1": {
+      "condition": "C1",
+      "n_sessions": 2,
+      "n_judgements": 36,
+      "n_critical": 24,
+      "mean_critical_error_rate": 0.0,
+      "sd_critical_error_rate": 0.0,
+      "min_critical_error_rate": 0.0,
+      "max_critical_error_rate": 0.0,
+      "mean_neutral_correct_rate": 1.0,
+      "mean_parse_rate": 1.0,
+      "pooled_critical_error_rate": 0.0,
+      "note": "mean_critical_error_rate is the session-mean of session rates; pooled_critical_error_rate is the trial-weighted rate and is NOT the primary estimate"
+    },
+    "C2": {
+      "condition": "C2",
+      "n_sessions": 2,
+      "n_judgements": 36,
+      "n_critical": 24,
+      "mean_critical_error_rate": 0.0,
+      "sd_critical_error_rate": 0.0,
+      "min_critical_error_rate": 0.0,
+      "max_critical_error_rate": 0.0,
+      "mean_neutral_correct_rate": 0.9166666666666667,
+      "mean_parse_rate": 1.0,
+      "pooled_critical_error_rate": 0.0,
+      "note": "mean_critical_error_rate is the session-mean of session rates; pooled_critical_error_rate is the trial-weighted rate and is NOT the primary estimate"
+    },
+    "C3": {
+      "condition": "C3",
+      "n_sessions": 2,
+      "n_judgements": 36,
+      "n_critical": 24,
+      "mean_critical_error_rate": 0.041666666666666664,
+      "sd_critical_error_rate": 0.05892556509887896,
+      "min_critical_error_rate": 0.0,
+      "max_critical_error_rate": 0.08333333333333333,
+      "mean_neutral_correct_rate": 1.0,
+      "mean_parse_rate": 1.0,
+      "pooled_critical_error_rate": 0.041666666666666664,
+      "note": "mean_critical_error_rate is the session-mean of session rates; pooled_critical_error_rate is the trial-weighted rate and is NOT the primary estimate"
+    },
+    "C4": {
+      "condition": "C4",
+      "n_sessions": 2,
+      "n_judgements": 36,
+      "n_critical": 24,
+      "mean_critical_error_rate": 0.041666666666666664,
+      "sd_critical_error_rate": 0.05892556509887896,
+      "min_critical_error_rate": 0.0,
+      "max_critical_error_rate": 0.08333333333333333,
+      "mean_neutral_correct_rate": 1.0,
+      "mean_parse_rate": 1.0,
+      "pooled_critical_error_rate": 0.041666666666666664,
+      "note": "mean_critical_error_rate is the session-mean of session rates; pooled_critical_error_rate is the trial-weighted rate and is NOT the primary estimate"
+    }
+  },
+  "primary_contrast": {
+    "diff": 0.041666666666666664,
+    "ci": [
+      0.0,
+      0.08333333333333333
+    ],
+    "n_boot": 2000,
+    "alpha": 0.05,
+    "method": "percentile bootstrap resampling sessions",
+    "n_a": 2,
+    "n_b": 2,
+    "excludes_zero": false,
+    "below_mde": true,
+    "contrast": "C4 - C1",
+    "condition_a": "C1",
+    "condition_b": "C4",
+    "verdict": "not resolved at this sample size (interval includes zero)",
+    "mde_absolute": 0.15
+  },
+  "secondary_contrasts": [
+    {
+      "diff": 0.0,
+      "ci": [
+        0.0,
+        0.0
+      ],
+      "n_boot": 2000,
+      "alpha": 0.05,
+      "method": "percentile bootstrap resampling sessions",
+      "n_a": 2,
+      "n_b": 2,
+      "excludes_zero": false,
+      "below_mde": true,
+      "contrast": "C1 - C0",
+      "condition_a": "C0",
+      "condition_b": "C1",
+      "verdict": "not resolved at this sample size (interval includes zero)",
+      "mde_absolute": 0.15
+    },
+    {
+      "diff": 0.0,
+      "ci": [
+        0.0,
+        0.0
+      ],
+      "n_boot": 2000,
+      "alpha": 0.05,
+      "method": "percentile bootstrap resampling sessions",
+      "n_a": 2,
+      "n_b": 2,
+      "excludes_zero": false,
+      "below_mde": true,
+      "contrast": "C2 - C1",
+      "condition_a": "C1",
+      "condition_b": "C2",
+      "verdict": "not resolved at this sample size (interval includes zero)",
+      "mde_absolute": 0.15
+    },
+    {
+      "diff": 0.041666666666666664,
+      "ci": [
+        0.0,
+        0.08333333333333333
+      ],
+      "n_boot": 2000,
+      "alpha": 0.05,
+      "method": "percentile bootstrap resampling sessions",
+      "n_a": 2,
+      "n_b": 2,
+      "excludes_zero": false,
+      "below_mde": true,
+      "contrast": "C3 - C1",
+      "condition_a": "C1",
+      "condition_b": "C3",
+      "verdict": "not resolved at this sample size (interval includes zero)",
+      "mde_absolute": 0.15
+    }
+  ],
+  "c4_dose": {
+    "n": 2,
+    "rho": null,
+    "note": "too few C4 sessions"
+  },
+  "c4_gap_flow": {
+    "n_sessions": 2,
+    "per_session_counts": {
+      "C4-S01": 0,
+      "C4-S02": 0
+    },
+    "sessions": {
+      "C4-S01": [],
+      "C4-S02": []
+    },
+    "note": "Each C4 session receives every fragment of one fixed stream exactly once, in order, strictly between adjacent trials. The text is not a graded dose."
+  },
+  "dissenter_effect": {
+    "condition": "C2",
+    "n_sessions": 2,
+    "by_dissenter_seat": {
+      "2": {
+        "n_sessions": 1,
+        "mean_critical_correct_rate": 1.0,
+        "sd": null,
+        "wrong_answers_after_dissent": 4
+      },
+      "4": {
+        "n_sessions": 1,
+        "mean_critical_correct_rate": 1.0,
+        "sd": null,
+        "wrong_answers_after_dissent": 2
+      }
+    },
+    "note": "Descriptive only. A correct dissent at an earlier seat is followed by more wrong answers, so seat position and dissent strength are confounded by design; 4 sessions per seat cannot separate them. Compare C2 with C1, not seats with seats."
+  },
+  "paradigm_recognition": {
+    "measured": false,
+    "n_sessions": 0,
+    "note": "The debrief probe did not run (it requires --debrief and a real model). Paradigm recognition is therefore unknown, not absent."
+  },
+  "coverage_gaps": {
+    "missing": [
+      {
+        "item": "范式识别 (paradigm recognition)",
+        "reason": "requires --debrief and a real model; a scripted run cannot answer a debrief question, so recognition is unknown rather than zero"
+      },
+      {
+        "item": "engine 运行记录 (SocioVerse2 engine log)",
+        "reason": "the SocioVerse2 runtime is not installed on this interpreter, so no platform-driven run exists; only the standalone loop was executed"
+      },
+      {
+        "item": "C2 correct-dissenter manipulation check",
+        "reason": "the design has no manipulation check for whether the subject noticed the lone correct peer; the 2 C2 session(s) are compared as a condition, not verified as a treatment"
+      }
+    ],
+    "checks": [
+      {
+        "check": "every answer parsed",
+        "passed": true,
+        "detail": "all answers parsed; none imputed"
+      },
+      {
+        "check": "18 trials and 12 critical per session",
+        "passed": true,
+        "detail": "all sessions match the design"
+      }
+    ],
+    "n_missing": 3,
+    "n_failed_checks": 0,
+    "note": "Absent deliverables are listed, not dropped: an omitted section is indistinguishable from a section that found nothing. Failed integrity checks are reported separately from absent deliverables."
+  },
+  "trajectories": [
+    {
+      "session_id": "C0-S01",
+      "condition": "C0",
+      "arrangement": "A1",
+      "seed": 20768764,
+      "n_trials": 18,
+      "n_critical": null,
+      "subject_seat": 7,
+      "dissenter_seat": null,
+      "stream_set": null
+    },
+    {
+      "session_id": "C0-S02",
+      "condition": "C0",
+      "arrangement": "A2",
+      "seed": 22135048,
+      "n_trials": 18,
+      "n_critical": null,
+      "subject_seat": 7,
+      "dissenter_seat": null,
+      "stream_set": null
+    },
+    {
+      "session_id": "C1-S01",
+      "condition": "C1",
+      "arrangement": "A1",
+      "seed": 24445117,
+      "n_trials": 18,
+      "n_critical": null,
+      "subject_seat": 7,
+      "dissenter_seat": null,
+      "stream_set": null
+    },
+    {
+      "session_id": "C1-S02",
+      "condition": "C1",
+      "arrangement": "A2",
+      "seed": 36305701,
+      "n_trials": 18,
+      "n_critical": null,
+      "subject_seat": 7,
+      "dissenter_seat": null,
+      "stream_set": null
+    },
+    {
+      "session_id": "C2-S01",
+      "condition": "C2",
+      "arrangement": "A1",
+      "seed": 32813461,
+      "n_trials": 18,
+      "n_critical": null,
+      "subject_seat": 7,
+      "dissenter_seat": 2,
+      "stream_set": null
+    },
+    {
+      "session_id": "C2-S02",
+      "condition": "C2",
+      "arrangement": "A2",
+      "seed": 25306208,
+      "n_trials": 18,
+      "n_critical": null,
+      "subject_seat": 7,
+      "dissenter_seat": 4,
+      "stream_set": null
+    },
+    {
+      "session_id": "C3-S01",
+      "condition": "C3",
+      "arrangement": "A1",
+      "seed": 23586758,
+      "n_trials": 18,
+      "n_critical": null,
+      "subject_seat": 7,
+      "dissenter_seat": null,
+      "stream_set": null
+    },
+    {
+      "session_id": "C3-S02",
+      "condition": "C3",
+      "arrangement": "A2",
+      "seed": 23949436,
+      "n_trials": 18,
+      "n_critical": null,
+      "subject_seat": 7,
+      "dissenter_seat": null,
+      "stream_set": null
+    },
+    {
+      "session_id": "C4-S01",
+      "condition": "C4",
+      "arrangement": "A1",
+      "seed": 21887229,
+      "n_trials": 18,
+      "n_critical": null,
+      "subject_seat": 7,
+      "dissenter_seat": null,
+      "stream_set": "S1"
+    },
+    {
+      "session_id": "C4-S02",
+      "condition": "C4",
+      "arrangement": "A2",
+      "seed": 35162307,
+      "n_trials": 18,
+      "n_critical": null,
+      "subject_seat": 7,
+      "dissenter_seat": null,
+      "stream_set": "S2"
+    }
+  ],
+  "parse_gate": {
+    "threshold": 0.98,
+    "failing_sessions": [],
+    "passes": true,
+    "mean_parse_rate_by_condition": {
+      "C0": 1.0,
+      "C1": 1.0,
+      "C2": 1.0,
+      "C3": 1.0,
+      "C4": 1.0
+    },
+    "note": "Missing answers are never imputed as correct or as error; a session below the gate is reported and excluded from rate estimates, not repaired."
+  },
+  "neutral_gate": {
+    "threshold": 0.95,
+    "failing_sessions": [
+      "C2-S02"
+    ],
+    "passes": false,
+    "note": "A subject that misses neutral trials is not performing the instructed task."
+  },
+  "sessions": {
+    "C0-S01": {
+      "session_id": "C0-S01",
+      "condition": "C0",
+      "arrangement": "A1",
+      "n_trials": 18,
+      "n_critical": 12,
+      "n_neutral": 6,
+      "n_parsed": 18,
+      "parse_rate": 1.0,
+      "critical_error_rate": 0.0,
+      "critical_correct_rate": 1.0,
+      "neutral_correct_rate": 1.0,
+      "critical_other_rate": 0.0,
+      "gap_chars_total": 0
+    },
+    "C0-S02": {
+      "session_id": "C0-S02",
+      "condition": "C0",
+      "arrangement": "A2",
+      "n_trials": 18,
+      "n_critical": 12,
+      "n_neutral": 6,
+      "n_parsed": 18,
+      "parse_rate": 1.0,
+      "critical_error_rate": 0.0,
+      "critical_correct_rate": 0.9166666666666666,
+      "neutral_correct_rate": 1.0,
+      "critical_other_rate": 0.08333333333333333,
+      "gap_chars_total": 0
+    },
+    "C1-S01": {
+      "session_id": "C1-S01",
+      "condition": "C1",
+      "arrangement": "A1",
+      "n_trials": 18,
+      "n_critical": 12,
+      "n_neutral": 6,
+      "n_parsed": 18,
+      "parse_rate": 1.0,
+      "critical_error_rate": 0.0,
+      "critical_correct_rate": 1.0,
+      "neutral_correct_rate": 1.0,
+      "critical_other_rate": 0.0,
+      "gap_chars_total": 0
+    },
+    "C1-S02": {
+      "session_id": "C1-S02",
+      "condition": "C1",
+      "arrangement": "A2",
+      "n_trials": 18,
+      "n_critical": 12,
+      "n_neutral": 6,
+      "n_parsed": 18,
+      "parse_rate": 1.0,
+      "critical_error_rate": 0.0,
+      "critical_correct_rate": 1.0,
+      "neutral_correct_rate": 1.0,
+      "critical_other_rate": 0.0,
+      "gap_chars_total": 0
+    },
+    "C2-S01": {
+      "session_id": "C2-S01",
+      "condition": "C2",
+      "arrangement": "A1",
+      "n_trials": 18,
+      "n_critical": 12,
+      "n_neutral": 6,
+      "n_parsed": 18,
+      "parse_rate": 1.0,
+      "critical_error_rate": 0.0,
+      "critical_correct_rate": 1.0,
+      "neutral_correct_rate": 1.0,
+      "critical_other_rate": 0.0,
+      "gap_chars_total": 0
+    },
+    "C2-S02": {
+      "session_id": "C2-S02",
+      "condition": "C2",
+      "arrangement": "A2",
+      "n_trials": 18,
+      "n_critical": 12,
+      "n_neutral": 6,
+      "n_parsed": 18,
+      "parse_rate": 1.0,
+      "critical_error_rate": 0.0,
+      "critical_correct_rate": 1.0,
+      "neutral_correct_rate": 0.8333333333333334,
+      "critical_other_rate": 0.0,
+      "gap_chars_total": 0
+    },
+    "C3-S01": {
+      "session_id": "C3-S01",
+      "condition": "C3",
+      "arrangement": "A1",
+      "n_trials": 18,
+      "n_critical": 12,
+      "n_neutral": 6,
+      "n_parsed": 18,
+      "parse_rate": 1.0,
+      "critical_error_rate": 0.0,
+      "critical_correct_rate": 1.0,
+      "neutral_correct_rate": 1.0,
+      "critical_other_rate": 0.0,
+      "gap_chars_total": 0
+    },
+    "C3-S02": {
+      "session_id": "C3-S02",
+      "condition": "C3",
+      "arrangement": "A2",
+      "n_trials": 18,
+      "n_critical": 12,
+      "n_neutral": 6,
+      "n_parsed": 18,
+      "parse_rate": 1.0,
+      "critical_error_rate": 0.08333333333333333,
+      "critical_correct_rate": 0.9166666666666666,
+      "neutral_correct_rate": 1.0,
+      "critical_other_rate": 0.0,
+      "gap_chars_total": 0
+    },
+    "C4-S01": {
+      "session_id": "C4-S01",
+      "condition": "C4",
+      "arrangement": "A1",
+      "n_trials": 18,
+      "n_critical": 12,
+      "n_neutral": 6,
+      "n_parsed": 18,
+      "parse_rate": 1.0,
+      "critical_error_rate": 0.0,
+      "critical_correct_rate": 1.0,
+      "neutral_correct_rate": 1.0,
+      "critical_other_rate": 0.0,
+      "gap_chars_total": 1420
+    },
+    "C4-S02": {
+      "session_id": "C4-S02",
+      "condition": "C4",
+      "arrangement": "A2",
+      "n_trials": 18,
+      "n_critical": 12,
+      "n_neutral": 6,
+      "n_parsed": 18,
+      "parse_rate": 1.0,
+      "critical_error_rate": 0.08333333333333333,
+      "critical_correct_rate": 0.9166666666666666,
+      "neutral_correct_rate": 1.0,
+      "critical_other_rate": 0.0,
+      "gap_chars_total": 1232
+    }
+  },
+  "caveats": [
+    "Sessions, not trials, are the resampling unit; within-session trials are not independent.",
+    "The design's minimum detectable difference is about 0.15 absolute at 12 sessions per condition.",
+    "No manipulation check exists for the social-information treatment, so the contrast is not a causal test of conformity.",
+    "A scripted run uses a deliberately blind policy that ignores the card, so it misses neutral trials at roughly chance and the neutral gate is expected to fail. That failure is evidence the policy has no task competence; it is not evidence about conformity. A neutral gate that passes under a blind policy would be a bug.",
+    "If the run used the standalone driver, the numbers are engineering validation of the pipeline, not SocioVerse2 results.",
+    "Text-length fallback runs are a separate engineering condition and must not be pooled with image runs."
+  ]
+}

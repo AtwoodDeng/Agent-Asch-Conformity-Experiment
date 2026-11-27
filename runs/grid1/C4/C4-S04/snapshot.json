@@ -1,0 +1,868 @@
+{
+  "session": {
+    "session_id": "C4-S04",
+    "condition": "C4",
+    "index": 3,
+    "arrangement": "A1",
+    "seed": 26852389,
+    "subject_seat": 7,
+    "confederate_seats": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "dissenter_seat": null,
+    "stream_set": "S2",
+    "n_trials": 18
+  },
+  "steps_completed": 18,
+  "gaps_shown": 17,
+  "record": {
+    "trials": {
+      "1": {
+        "trial_id": "T01",
+        "speeches": [
+          {
+            "seat": 1,
+            "answer": "A",
+            "role": "confederate"
+          },
+          {
+            "seat": 2,
+            "answer": "A",
+            "role": "confederate"
+          },
+          {
+            "seat": 3,
+            "answer": "A",
+            "role": "confederate"
+          },
+          {
+            "seat": 4,
+            "answer": "A",
+            "role": "confederate"
+          },
+          {
+            "seat": 5,
+            "answer": "A",
+            "role": "confederate"
+          },
+          {
+            "seat": 6,
+            "answer": "A",
+            "role": "confederate"
+          }
+        ],
+        "subject_answer": "B",
+        "subject_raw": "scripted policy=random",
+        "subject_source": "rule"
+      },
+      "2": {
+        "trial_id": "T02",
+        "speeches": [
+          {
+            "seat": 1,
+            "answer": "B",
+            "role": "confederate"
+          },
+          {
+            "seat": 2,
+            "answer": "B",
+            "role": "confederate"
+          },
+          {
+            "seat": 3,
+            "answer": "B",
+            "role": "confederate"
+          },
+          {
+            "seat": 4,
+            "answer": "B",
+            "role": "confederate"
+          },
+          {
+            "seat": 5,
+            "answer": "B",
+            "role": "confederate"
+          },
+          {
+            "seat": 6,
+            "answer": "B",
+            "role": "confederate"
+          }
+        ],
+        "subject_answer": "B",
+        "subject_raw": "scripted policy=random",
+        "subject_source": "rule"
+      },
+      "3": {
+        "trial_id": "T03",
+        "speeches": [
+          {
+            "seat": 1,
+            "answer": "B",
+            "role": "confederate"
+          },
+          {
+            "seat": 2,
+            "answer": "B",
+            "role": "confederate"
+          },
+          {
+            "seat": 3,
+            "answer": "B",
+            "role": "confederate"
+          },
+          {
+            "seat": 4,
+            "answer": "B",
+            "role": "confederate"
+          },
+          {
+            "seat": 5,
+            "answer": "B",
+            "role": "confederate"
+          },
+          {
+            "seat": 6,
+            "answer": "B",
+            "role": "confederate"
+          }
+        ],
+        "subject_answer": "B",
+        "subject_raw": "scripted policy=random",
+        "subject_source": "rule"
+      },
+      "4": {
+        "trial_id": "T04",
+        "speeches": [
+          {
+            "seat": 1,
+            "answer": "A",
+            "role": "confederate"
+          },
+          {
+            "seat": 2,
+            "answer": "A",
+            "role": "confederate"
+          },
+          {
+            "seat": 3,
+            "answer": "A",
+            "role": "confederate"
+          },
+          {
+            "seat": 4,
+            "answer": "A",
+            "role": "confederate"
+          },
+          {
+            "seat": 5,
+            "answer": "A",
+            "role": "confederate"
+          },
+          {
+            "seat": 6,
+            "answer": "A",
+            "role": "confederate"
+          }
+        ],
+        "subject_answer": "A",
+        "subject_raw": "scripted policy=random",
+        "subject_source": "rule"
+      },
+      "5": {
+        "trial_id": "T05",
+        "speeches": [
+          {
+            "seat": 1,
+            "answer": "C",
+            "role": "confederate"
+          },
+          {
+            "seat": 2,
+            "answer": "C",
+            "role": "confederate"
+          },
+          {
+            "seat": 3,
+            "answer": "C",
+            "role": "confederate"
+          },
+          {
+            "seat": 4,
+            "answer": "C",
+            "role": "confederate"
+          },
+          {
+            "seat": 5,
+            "answer": "C",
+            "role": "confederate"
+          },
+          {
+            "seat": 6,
+            "answer": "C",
+            "role": "confederate"
+          }
+        ],
+        "subject_answer": "B",
+        "subject_raw": "scripted policy=random",
+        "subject_source": "rule"
+      },
+      "6": {
+        "trial_id": "T06",
+        "speeches": [
+          {
+            "seat": 1,
+            "answer": "A",
+            "role": "confederate"
+          },
+          {
+            "seat": 2,
+            "answer": "A",
+            "role": "confederate"
+          },
+          {
+            "seat": 3,
+            "answer": "A",
+            "role": "confederate"
+          },
+          {
+            "seat": 4,
+            "answer": "A",
+            "role": "confederate"
+          },
+          {
+            "seat": 5,
+            "answer": "A",
+            "role": "confederate"
+          },
+          {
+            "seat": 6,
+            "answer": "A",
+            "role": "confederate"
+          }
+        ],
+        "subject_answer": "B",
+        "subject_raw": "scripted policy=random",
+        "subject_source": "rule"
+      },
+      "7": {
+        "trial_id": "T07",
+        "speeches": [
+          {
+            "seat": 1,
+            "answer": "C",
+            "role": "confederate"
+          },
+          {
+            "seat": 2,
+            "answer": "C",
+            "role": "confederate"
+          },
+          {
+            "seat": 3,
+            "answer": "C",
+            "role": "confederate"
+          },
+          {
+            "seat": 4,
+            "answer": "C",
+            "role": "confederate"
+          },
+          {
+            "seat": 5,
+            "answer": "C",
+            "role": "confederate"
+          },
+          {
+            "seat": 6,
+            "answer": "C",
+            "role": "confederate"
+          }
+        ],
+        "subject_answer": "C",
+        "subject_raw": "scripted policy=random",
+        "subject_source": "rule"
+      },
+      "8": {
+        "trial_id": "T08",
+        "speeches": [
+          {
+            "seat": 1,
+            "answer": "C",
+            "role": "confederate"
+          },
+          {
+            "seat": 2,
+            "answer": "C",
+            "role": "confederate"
+          },
+          {
+            "seat": 3,
+            "answer": "C",
+            "role": "confederate"
+          },
+          {
+            "seat": 4,
+            "answer": "C",
+            "role": "confederate"
+          },
+          {
+            "seat": 5,
+            "answer": "C",
+            "role": "confederate"
+          },
+          {
+            "seat": 6,
+            "answer": "C",
+            "role": "confederate"
+          }
+        ],
+        "subject_answer": "B",
+        "subject_raw": "scripted policy=random",
+        "subject_source": "rule"
+      },
+      "9": {
+        "trial_id": "T09",
+        "speeches": [
+          {
+            "seat": 1,
+            "answer": "B",
+            "role": "confederate"
+          },
+          {
+            "seat": 2,
+            "answer": "B",
+            "role": "confederate"
+          },
+          {
+            "seat": 3,
+            "answer": "B",
+            "role": "confederate"
+          },
+          {
+            "seat": 4,
+            "answer": "B",
+            "role": "confederate"
+          },
+          {
+            "seat": 5,
+            "answer": "B",
+            "role": "confederate"
+          },
+          {
+            "seat": 6,
+            "answer": "B",
+            "role": "confederate"
+          }
+        ],
+        "subject_answer": "C",
+        "subject_raw": "scripted policy=random",
+        "subject_source": "rule"
+      },
+      "10": {
+        "trial_id": "T10",
+        "speeches": [
+          {
+            "seat": 1,
+            "answer": "A",
+            "role": "confederate"
+          },
+          {
+            "seat": 2,
+            "answer": "A",
+            "role": "confederate"
+          },
+          {
+            "seat": 3,
+            "answer": "A",
+            "role": "confederate"
+          },
+          {
+            "seat": 4,
+            "answer": "A",
+            "role": "confederate"
+          },
+          {
+            "seat": 5,
+            "answer": "A",
+            "role": "confederate"
+          },
+          {
+            "seat": 6,
+            "answer": "A",
+            "role": "confederate"
+          }
+        ],
+        "subject_answer": "C",
+        "subject_raw": "scripted policy=random",
+        "subject_source": "rule"
+      },
+      "11": {
+        "trial_id": "T11",
+        "speeches": [
+          {
+            "seat": 1,
+            "answer": "B",
+            "role": "confederate"
+          },
+          {
+            "seat": 2,
+            "answer": "B",
+            "role": "confederate"
+          },
+          {
+            "seat": 3,
+            "answer": "B",
+            "role": "confederate"
+          },
+          {
+            "seat": 4,
+            "answer": "B",
+            "role": "confederate"
+          },
+          {
+            "seat": 5,
+            "answer": "B",
+            "role": "confederate"
+          },
+          {
+            "seat": 6,
+            "answer": "B",
+            "role": "confederate"
+          }
+        ],
+        "subject_answer": "A",
+        "subject_raw": "scripted policy=random",
+        "subject_source": "rule"
+      },
+      "12": {
+        "trial_id": "T12",
+        "speeches": [
+          {
+            "seat": 1,
+            "answer": "B",
+            "role": "confederate"
+          },
+          {
+            "seat": 2,
+            "answer": "B",
+            "role": "confederate"
+          },
+          {
+            "seat": 3,
+            "answer": "B",
+            "role": "confederate"
+          },
+          {
+            "seat": 4,
+            "answer": "B",
+            "role": "confederate"
+          },
+          {
+            "seat": 5,
+            "answer": "B",
+            "role": "confederate"
+          },
+          {
+            "seat": 6,
+            "answer": "B",
+            "role": "confederate"
+          }
+        ],
+        "subject_answer": "A",
+        "subject_raw": "scripted policy=random",
+        "subject_source": "rule"
+      },
+      "13": {
+        "trial_id": "T13",
+        "speeches": [
+          {
+            "seat": 1,
+            "answer": "A",
+            "role": "confederate"
+          },
+          {
+            "seat": 2,
+            "answer": "A",
+            "role": "confederate"
+          },
+          {
+            "seat": 3,
+            "answer": "A",
+            "role": "confederate"
+          },
+          {
+            "seat": 4,
+            "answer": "A",
+            "role": "confederate"
+          },
+          {
+            "seat": 5,
+            "answer": "A",
+            "role": "confederate"
+          },
+          {
+            "seat": 6,
+            "answer": "A",
+            "role": "confederate"
+          }
+        ],
+        "subject_answer": "B",
+        "subject_raw": "scripted policy=random",
+        "subject_source": "rule"
+      },
+      "14": {
+        "trial_id": "T14",
+        "speeches": [
+          {
+            "seat": 1,
+            "answer": "C",
+            "role": "confederate"
+          },
+          {
+            "seat": 2,
+            "answer": "C",
+            "role": "confederate"
+          },
+          {
+            "seat": 3,
+            "answer": "C",
+            "role": "confederate"
+          },
+          {
+            "seat": 4,
+            "answer": "C",
+            "role": "confederate"
+          },
+          {
+            "seat": 5,
+            "answer": "C",
+            "role": "confederate"
+          },
+          {
+            "seat": 6,
+            "answer": "C",
+            "role": "confederate"
+          }
+        ],
+        "subject_answer": "B",
+        "subject_raw": "scripted policy=random",
+        "subject_source": "rule"
+      },
+      "15": {
+        "trial_id": "T15",
+        "speeches": [
+          {
+            "seat": 1,
+            "answer": "B",
+            "role": "confederate"
+          },
+          {
+            "seat": 2,
+            "answer": "B",
+            "role": "confederate"
+          },
+          {
+            "seat": 3,
+            "answer": "B",
+            "role": "confederate"
+          },
+          {
+            "seat": 4,
+            "answer": "B",
+            "role": "confederate"
+          },
+          {
+            "seat": 5,
+            "answer": "B",
+            "role": "confederate"
+          },
+          {
+            "seat": 6,
+            "answer": "B",
+            "role": "confederate"
+          }
+        ],
+        "subject_answer": "B",
+        "subject_raw": "scripted policy=random",
+        "subject_source": "rule"
+      },
+      "16": {
+        "trial_id": "T16",
+        "speeches": [
+          {
+            "seat": 1,
+            "answer": "C",
+            "role": "confederate"
+          },
+          {
+            "seat": 2,
+            "answer": "C",
+            "role": "confederate"
+          },
+          {
+            "seat": 3,
+            "answer": "C",
+            "role": "confederate"
+          },
+          {
+            "seat": 4,
+            "answer": "C",
+            "role": "confederate"
+          },
+          {
+            "seat": 5,
+            "answer": "C",
+            "role": "confederate"
+          },
+          {
+            "seat": 6,
+            "answer": "C",
+            "role": "confederate"
+          }
+        ],
+        "subject_answer": "B",
+        "subject_raw": "scripted policy=random",
+        "subject_source": "rule"
+      },
+      "17": {
+        "trial_id": "T17",
+        "speeches": [
+          {
+            "seat": 1,
+            "answer": "C",
+            "role": "confederate"
+          },
+          {
+            "seat": 2,
+            "answer": "C",
+            "role": "confederate"
+          },
+          {
+            "seat": 3,
+            "answer": "C",
+            "role": "confederate"
+          },
+          {
+            "seat": 4,
+            "answer": "C",
+            "role": "confederate"
+          },
+          {
+            "seat": 5,
+            "answer": "C",
+            "role": "confederate"
+          },
+          {
+            "seat": 6,
+            "answer": "C",
+            "role": "confederate"
+          }
+        ],
+        "subject_answer": "A",
+        "subject_raw": "scripted policy=random",
+        "subject_source": "rule"
+      },
+      "18": {
+        "trial_id": "T18",
+        "speeches": [
+          {
+            "seat": 1,
+            "answer": "A",
+            "role": "confederate"
+          },
+          {
+            "seat": 2,
+            "answer": "A",
+            "role": "confederate"
+          },
+          {
+            "seat": 3,
+            "answer": "A",
+            "role": "confederate"
+          },
+          {
+            "seat": 4,
+            "answer": "A",
+            "role": "confederate"
+          },
+          {
+            "seat": 5,
+            "answer": "A",
+            "role": "confederate"
+          },
+          {
+            "seat": 6,
+            "answer": "A",
+            "role": "confederate"
+          }
+        ],
+        "subject_answer": "C",
+        "subject_raw": "scripted policy=random",
+        "subject_source": "rule"
+      }
+    },
+    "gaps": {
+      "1": {
+        "gap_id": "S2-G01",
+        "after_trial_id": "T01",
+        "stream_set_id": "S2",
+        "chars": 71,
+        "sha256": "c811db2f3e186269fb0e1f4ca14e34d9da8581d9c45c676370cf2e8788f715f3",
+        "visible_order": 1
+      },
+      "2": {
+        "gap_id": "S2-G02",
+        "after_trial_id": "T02",
+        "stream_set_id": "S2",
+        "chars": 70,
+        "sha256": "a0d63a5eb619eb09242cebb42c66d33fd7eaa91479adbed67d5af45678aad8e7",
+        "visible_order": 3
+      },
+      "3": {
+        "gap_id": "S2-G03",
+        "after_trial_id": "T03",
+        "stream_set_id": "S2",
+        "chars": 75,
+        "sha256": "4dd111023bd706c27e359d891ff1eb65ce0fd7850a53512604626d62ea16447e",
+        "visible_order": 5
+      },
+      "4": {
+        "gap_id": "S2-G04",
+        "after_trial_id": "T04",
+        "stream_set_id": "S2",
+        "chars": 79,
+        "sha256": "7f6cfdaf41dc1449ecfdb2e7330cfbc2490ffd265a5a202030c54b57f77202b1",
+        "visible_order": 7
+      },
+      "5": {
+        "gap_id": "S2-G05",
+        "after_trial_id": "T05",
+        "stream_set_id": "S2",
+        "chars": 77,
+        "sha256": "7e2aa013b6dcc2e995fb24e951f9eee7b40f71a8687611ba53d39446127336be",
+        "visible_order": 9
+      },
+      "6": {
+        "gap_id": "S2-G06",
+        "after_trial_id": "T06",
+        "stream_set_id": "S2",
+        "chars": 76,
+        "sha256": "97cb93975a06630fcb6b38ac9bc24c1a82b88fa870ff0c9fc1ef749f93b830c4",
+        "visible_order": 11
+      },
+      "7": {
+        "gap_id": "S2-G07",
+        "after_trial_id": "T07",
+        "stream_set_id": "S2",
+        "chars": 74,
+        "sha256": "cd308225adc0b6cc75ff7534b4ea7926dd408a10372a9a8905147993cf43ada2",
+        "visible_order": 13
+      },
+      "8": {
+        "gap_id": "S2-G08",
+        "after_trial_id": "T08",
+        "stream_set_id": "S2",
+        "chars": 75,
+        "sha256": "9c9e8acacf43446dcac83ad388d7fb01502e6210af894ca2823472f6b41bd87f",
+        "visible_order": 15
+      },
+      "9": {
+        "gap_id": "S2-G09",
+        "after_trial_id": "T09",
+        "stream_set_id": "S2",
+        "chars": 67,
+        "sha256": "d9afbd79da789f48571e3310501d2aa2353e14eea0a6e6b7eb996c3e48c796d4",
+        "visible_order": 17
+      },
+      "10": {
+        "gap_id": "S2-G10",
+        "after_trial_id": "T10",
+        "stream_set_id": "S2",
+        "chars": 76,
+        "sha256": "d43581b320da6d3cc317ff8fab01b485b803fb5eb098ec0574b16c30bc853e51",
+        "visible_order": 19
+      },
+      "11": {
+        "gap_id": "S2-G11",
+        "after_trial_id": "T11",
+        "stream_set_id": "S2",
+        "chars": 72,
+        "sha256": "4eab3766deb77441b2c9c4a26ca7fb66595f01fbd139aff1a1c4d9f0d47b0684",
+        "visible_order": 21
+      },
+      "12": {
+        "gap_id": "S2-G12",
+        "after_trial_id": "T12",
+        "stream_set_id": "S2",
+        "chars": 72,
+        "sha256": "5b670bf8046927d519c7ea0ca0f3e68ac90e7488946673b1ccb5f0c4828b1a22",
+        "visible_order": 23
+      },
+      "13": {
+        "gap_id": "S2-G13",
+        "after_trial_id": "T13",
+        "stream_set_id": "S2",
+        "chars": 70,
+        "sha256": "6fdfa9e3384c435033bab99a3dececf9d1592b6acf5c22084c8fbca61e9c2f34",
+        "visible_order": 25
+      },
+      "14": {
+        "gap_id": "S2-G14",
+        "after_trial_id": "T14",
+        "stream_set_id": "S2",
+        "chars": 69,
+        "sha256": "17beff21741e8660188a350956cfbfea18fbdb4d5c6dc132788d006cd453bdaa",
+        "visible_order": 27
+      },
+      "15": {
+        "gap_id": "S2-G15",
+        "after_trial_id": "T15",
+        "stream_set_id": "S2",
+        "chars": 69,
+        "sha256": "51c453a0ce8b2671bf21d7f58e28106baecaf27361886aa1e88ea8f727fff99f",
+        "visible_order": 29
+      },
+      "16": {
+        "gap_id": "S2-G16",
+        "after_trial_id": "T16",
+        "stream_set_id": "S2",
+        "chars": 65,
+        "sha256": "64788ee997ad839a48f1c8533b0bf6fbaa3b258c9f539e8ba073e226bf44faf8",
+        "visible_order": 31
+      },
+      "17": {
+        "gap_id": "S2-G17",
+        "after_trial_id": "T17",
+        "stream_set_id": "S2",
+        "chars": 75,
+        "sha256": "f8e046b988234495cec4f1dc4f3cf25aef2329029e45279a50839026b75c41c2",
+        "visible_order": 33
+      }
+    }
+  },
+  "history_entries": 35,
+  "history_chars": 3113,
+  "scripted_seats": [
+    "P01",
+    "P02",
+    "P03",
+    "P04",
+    "P05",
+    "P06"
+  ],
+  "model": {
+    "llm_kind": "scripted",
+    "model": "scripted",
+    "scripted_policy": "random",
+    "calls": 0,
+    "fallbacks": 0,
+    "fallback_rate": 0.0,
+    "parse_failures": []
+  }
+}

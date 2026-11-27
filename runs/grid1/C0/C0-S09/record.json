@@ -1,0 +1,131 @@
+{
+  "trials": {
+    "1": {
+      "trial_id": "T01",
+      "speeches": [],
+      "subject_answer": "A",
+      "subject_raw": "scripted policy=random",
+      "subject_source": "rule"
+    },
+    "2": {
+      "trial_id": "T02",
+      "speeches": [],
+      "subject_answer": "A",
+      "subject_raw": "scripted policy=random",
+      "subject_source": "rule"
+    },
+    "3": {
+      "trial_id": "T03",
+      "speeches": [],
+      "subject_answer": "C",
+      "subject_raw": "scripted policy=random",
+      "subject_source": "rule"
+    },
+    "4": {
+      "trial_id": "T04",
+      "speeches": [],
+      "subject_answer": "A",
+      "subject_raw": "scripted policy=random",
+      "subject_source": "rule"
+    },
+    "5": {
+      "trial_id": "T05",
+      "speeches": [],
+      "subject_answer": "B",
+      "subject_raw": "scripted policy=random",
+      "subject_source": "rule"
+    },
+    "6": {
+      "trial_id": "T06",
+      "speeches": [],
+      "subject_answer": "B",
+      "subject_raw": "scripted policy=random",
+      "subject_source": "rule"
+    },
+    "7": {
+      "trial_id": "T07",
+      "speeches": [],
+      "subject_answer": "B",
+      "subject_raw": "scripted policy=random",
+      "subject_source": "rule"
+    },
+    "8": {
+      "trial_id": "T08",
+      "speeches": [],
+      "subject_answer": "B",
+      "subject_raw": "scripted policy=random",
+      "subject_source": "rule"
+    },
+    "9": {
+      "trial_id": "T09",
+      "speeches": [],
+      "subject_answer": "B",
+      "subject_raw": "scripted policy=random",
+      "subject_source": "rule"
+    },
+    "10": {
+      "trial_id": "T10",
+      "speeches": [],
+      "subject_answer": "C",
+      "subject_raw": "scripted policy=random",
+      "subject_source": "rule"
+    },
+    "11": {
+      "trial_id": "T11",
+      "speeches": [],
+      "subject_answer": "B",
+      "subject_raw": "scripted policy=random",
+      "subject_source": "rule"
+    },
+    "12": {
+      "trial_id": "T12",
+      "speeches": [],
+      "subject_answer": "B",
+      "subject_raw": "scripted policy=random",
+      "subject_source": "rule"
+    },
+    "13": {
+      "trial_id": "T13",
+      "speeches": [],
+      "subject_answer": "C",
+      "subject_raw": "scripted policy=random",
+      "subject_source": "rule"
+    },
+    "14": {
+      "trial_id": "T14",
+      "speeches": [],
+      "subject_answer": "B",
+      "subject_raw": "scripted policy=random",
+      "subject_source": "rule"
+    },
+    "15": {
+      "trial_id": "T15",
+      "speeches": [],
+      "subject_answer": "A",
+      "subject_raw": "scripted policy=random",
+      "subject_source": "rule"
+    },
+    "16": {
+      "trial_id": "T16",
+      "speeches": [],
+      "subject_answer": "B",
+      "subject_raw": "scripted policy=random",
+      "subject_source": "rule"
+    },
+    "17": {
+      "trial_id": "T17",
+      "speeches": [],
+      "subject_answer": "B",
+      "subject_raw": "scripted policy=random",
+      "subject_source": "rule"
+    },
+    "18": {
+      "trial_id": "T18",
+      "speeches": [],
+      "subject_answer": "A",
+      "subject_raw": "scripted policy=random",
+      "subject_source": "rule"
+    }
+  },
+  "gaps": {}
+}
