@@ -46,25 +46,34 @@ def _confederate_id(seat: int) -> str:
 
 @_register()("population", POP_REF)
 class AschPopulationProvider(_abc()):  # type: ignore[misc]
-    def __init__(self, *, n_agents: int = 7, **_unused: Any) -> None:
-        if n_agents != len(CONFEDERATE_SEATS) + 1:
+    def __init__(self, bundle: Any = None, *, n_agents: int = 1, **_unused: Any) -> None:
+        # Engine convention: ``cls(bundle)``. The bundle's provider_args decide how
+        # many REAL personas exist. The six confederate seats are scripted inside
+        # the environment and never make a decision, so they are NOT engine
+        # personas; ``n_agents=1`` materializes only the subject (P07). The
+        # historical ``n_agents=7`` snapshot is kept for the standalone record.
+        if bundle is not None:
+            n_agents = int((getattr(bundle, "provider_args", None) or {}).get("n_agents", 1))
+        if n_agents not in (1, len(CONFEDERATE_SEATS) + 1):
             raise ValueError(
-                f"n_agents={n_agents}: the design fixes {len(CONFEDERATE_SEATS)} confederates + 1 subject"
+                f"n_agents={n_agents}: expected 1 (engine: subject only) "
+                f"or {len(CONFEDERATE_SEATS) + 1} (standalone snapshot incl. scripted seats)"
             )
         self.n_agents = n_agents
 
     def build(self, seed: int = 0) -> list[Any]:
         Persona = _persona_cls()
         personas = []
-        for seat in CONFEDERATE_SEATS:
-            personas.append(
-                Persona(
-                    agent_id=_confederate_id(seat),
-                    group_key="session",
-                    attributes={"seat": seat, "responds_by_script": True},
-                    init_state={"answers_given": 0},
+        if self.n_agents == len(CONFEDERATE_SEATS) + 1:
+            for seat in CONFEDERATE_SEATS:
+                personas.append(
+                    Persona(
+                        agent_id=_confederate_id(seat),
+                        group_key="session",
+                        attributes={"seat": seat, "responds_by_script": True},
+                        init_state={"answers_given": 0},
+                    )
                 )
-            )
         personas.append(
             Persona(
                 agent_id=SUBJECT_ID,

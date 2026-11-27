@@ -43,18 +43,32 @@ def study_id_for(session: Session) -> str:
 
 
 def make_study(session: Session, *, maintainer: str = "dsh") -> Any:
-    StudySpec = _schemas().StudySpec
-    return StudySpec(
+    schemas = _schemas()
+    return schemas.StudySpec(
         study_id=study_id_for(session),
         title=f"Line-length judgement, {session.condition} session {session.index + 1:02d}",
-        description=(
-            f"Condition {session.condition} ({session.condition_meta.label}); "
-            f"arrangement {session.arrangement}; 18 trials, "
-            f"{'with' if session.condition_meta.adds_gaps else 'without'} inter-trial ambient text."
+        research_question=(
+            "Does a unanimous wrong majority shift a multimodal LLM's public "
+            "line-length judgement, and does one correct dissenter weaken that shift?"
         ),
+        hypothesis=(
+            "H1: a unanimous wrong majority raises the designated-error rate vs C0. "
+            "H2: one correct dissenter (C2) lowers it vs C1. "
+            "C3 is a reverse control; C4 is an exploratory inter-trial gap condition."
+        ),
+        study_type="longitudinal",
+        n_steps=len(session.trials),
+        seed=session.seed,
+        time_unit="abstract",
+        step_meaning="one line-judgement trial (18 per session)",
+        metrics=["critical_error_rate", "critical_correct_rate", "neutral_correct_rate", "parse_rate"],
+        display_metrics=["critical_error_rate", "neutral_correct_rate"],
+        domain="social-psychology",
+        tags=["asch1956", "line-judgment", "from-scratch", session.condition.lower()],
+        legacy_simulator="from_scratch",
+        provider_refs=["asch.env", "asch.pop", "asch.decision", "asch.collector"],
         status="draft",
         maintainer=maintainer,
-        tags=["asch1956", "line-judgment", session.condition.lower()],
     )
 
 
@@ -67,7 +81,7 @@ def make_environment_bundle(session: Session, *, stimulus_root: str) -> Any:
     own (§4, L109/L112).
     """
     schemas = _schemas()
-    bundle = schemas.EnvironmentBundle(
+    return schemas.EnvironmentBundle(
         study_id=study_id_for(session),
         provider_ref="asch.env",
         provider_args={
@@ -77,33 +91,40 @@ def make_environment_bundle(session: Session, *, stimulus_root: str) -> Any:
         },
         layers=[
             schemas.EnvironmentLayer(
-                kind="scheduled_events",
-                payload=[],
-                note="No scheduled events: trials advance one at a time via the driver.",
+                name="stimulus",
+                modality="physical",
+                scope="macro",
+                dynamics="static",
+                description="the current trial's standard + comparison line card",
             ),
             schemas.EnvironmentLayer(
-                kind="information_program",
-                payload=schemas.InformationProgram(broadcasts=[]),
-                note="No broadcasts: peer answers are written into the group record, not broadcast.",
+                name="peer_answers",
+                modality="information",
+                scope="local",
+                dynamics="endogenous",
+                description="scripted confederate answers written into the group record before the subject speaks",
             ),
             schemas.EnvironmentLayer(
-                kind="interaction_structure",
-                payload=schemas.InteractionStructure(kind="sequential_scripted"),
-                note="Six scripted seats answer in seat order; the subject answers seventh.",
+                name="protocol",
+                modality="information",
+                scope="macro",
+                dynamics="static",
+                description="condition protocol note (never the answer key)",
             ),
         ],
-        n_steps=len(session.trials),
+        scheduled_events=[],
+        information_program=schemas.InformationProgram(broadcasts=[]),
     )
-    return bundle
 
 
-def make_population_bundle(session: Session) -> Any:  # noqa: ARG001
+def make_population_bundle(session: Session) -> Any:
     schemas = _schemas()
     return schemas.PopulationBundle(
-        study_id=study_id_for(session) if session else None,
+        study_id=study_id_for(session),
         provider_ref="asch.pop",
-        provider_args={"n_agents": 7},
-        interaction={"kind": "none"},
+        provider_args={"n_agents": 1},
+        interaction=schemas.InteractionStructure(kind="none"),
+        propagation=schemas.PropagationMode.INDEPENDENT,
     )
 
 
@@ -136,6 +157,7 @@ def make_simulation_config(
         decision_ref="asch.decision",
         decision_args=decision_args,
         collector_ref="asch.collector",
+        collector_args={},
         interaction_rounds=1,
         engine_args={
             # History is complete text only: past images are never re-sent (§3.3,
@@ -145,6 +167,8 @@ def make_simulation_config(
             "retain_full_history": True,
             "resend_past_images": False,
         },
+        store_ref="duckdb",
+        store_args={},
     )
 
 

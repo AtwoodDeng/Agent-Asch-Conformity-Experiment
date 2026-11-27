@@ -375,7 +375,9 @@ class AschDecisionModel(_abc()):  # type: ignore[misc]
                         "trial_id": payload.get("trial_id"),
                     },
                     source=source,
-                    rationale=rationale,
+                    # The platform's Action.rationale is list[str]; the raw
+                    # single-line trace stays in payload["raw"].
+                    rationale=[rationale] if rationale else [],
                 )
             )
         return actions

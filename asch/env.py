@@ -144,13 +144,29 @@ class AschEnvironment(_abc()):  # type: ignore[misc]
 
     def __init__(
         self,
+        bundle: Any = None,
         *,
-        session: Session,
-        stimulus_root: str | Path,
+        session: Session | None = None,
+        stimulus_root: str | Path | None = None,
         agent_id: str = "P07",
         max_history_trials: int | None = None,
         **_unused: Any,
     ) -> None:
+        # Engine convention: ``cls(bundle)``. The bundle's provider_args carry the
+        # same information the standalone driver passes as keyword args, so both
+        # paths build one identical environment.
+        if bundle is not None:
+            args = getattr(bundle, "provider_args", None) or {}
+            from asch.conditions import find_session
+
+            session = find_session(args["session_id"])
+            stimulus_root = args["stimulus_root"]
+            agent_id = args.get("agent_id", agent_id)
+            max_history_trials = args.get("max_history_trials", max_history_trials)
+        if session is None or stimulus_root is None:
+            raise ValueError(
+                "AschEnvironment needs a session and stimulus_root; pass a bundle or keyword args"
+            )
         self.session = session
         self.meta = CONDITIONS[session.condition]
         self.stimulus_root = Path(stimulus_root)
@@ -185,10 +201,13 @@ class AschEnvironment(_abc()):  # type: ignore[misc]
         self.gap_chars = 0
         self.seed = self.session.seed if seed is None else seed
 
-    def advance_to(self, t: int) -> None:
+    def advance_to(self, t: int) -> list[Any]:
         if not 1 <= t <= self.n_trials:
             raise ValueError(f"step {t} outside 1..{self.n_trials}")
         self.t = t
+        # No scheduled events or broadcasts in this study; the trial number
+        # itself is the only exogenous signal.
+        return []
 
     def _current(self) -> TrialState:
         # Guard the index explicitly: t=0 would silently wrap to the last trial
@@ -336,13 +355,13 @@ class AschEnvironment(_abc()):  # type: ignore[misc]
         self.t += 1
 
     def agent_state(self, agent_id: str | None = None) -> dict[str, Any]:
+        # The panel store expects a flat per-agent state dict, not a nested
+        # {agent_id: {...}} envelope.
         return {
-            self.agent_id: {
-                "condition": self.session.condition,
-                "session_id": self.session.session_id,
-                "trials_completed": len(self.rows),
-                "answers": [row["subject_answer"] for row in self.rows],
-            }
+            "condition": self.session.condition,
+            "session_id": self.session.session_id,
+            "trials_completed": len(self.rows),
+            "answers": [row["subject_answer"] for row in self.rows],
         }
 
     # -- inspection -------------------------------------------------------

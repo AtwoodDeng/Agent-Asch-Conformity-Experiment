@@ -92,8 +92,19 @@ class AschMetricCollector(_abc()):  # type: ignore[misc]
         self.rows: list[dict[str, Any]] = []
 
     def collect(self, env: Any, actions: list[Any], t: int) -> dict[str, Any]:  # noqa: ARG002
-        row = env.rows[-1] if getattr(env, "rows", None) else None
+        rows = getattr(env, "rows", None) or []
+        row = rows[-1] if rows else None
         if row is None:
+            # The engine collects a t=0 aggregate before any trial has run.
+            if t == 0:
+                return {
+                    "session_id": getattr(env, "session", None) and env.session.session_id,
+                    "condition": getattr(env, "session", None) and env.session.condition,
+                    "arrangement": getattr(env, "session", None) and env.session.arrangement,
+                    "n_trials": 0,
+                    "n_parsed": 0,
+                    "n_missing": 0,
+                }
             raise ValueError(f"step {t}: the environment has no completed trial to score")
         answer = row.get("subject_answer")
         peers = row.get("peer_answers") or []

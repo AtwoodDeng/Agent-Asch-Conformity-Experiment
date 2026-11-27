@@ -191,9 +191,14 @@ def run_via_engine(
 ) -> tuple[dict[str, Any], dict[str, Any]]:
     from socioverse.engine import build_simulator
 
+    from asch import register_providers
     from asch.bundles import make_asch_bundles
 
-    study, env_bundle, pop_bundle, sim_config = make_asch_bundles(
+    # Importing is registration: the runtime modules register their provider
+    # classes with the engine's registry before build_simulator resolves them.
+    register_providers()
+
+    _study, env_bundle, pop_bundle, sim_config = make_asch_bundles(
         session,
         stimulus_root=str(stimulus_root),
         llm_kind=llm_kind,
@@ -202,26 +207,48 @@ def run_via_engine(
         max_tokens=max_tokens,
         policy=policy,
     )
+    store_path = out_dir / "trajectory" / "study.duckdb"
+    store_path.parent.mkdir(parents=True, exist_ok=True)
+    if store_path.exists():
+        store_path.unlink()
+
     simulator = build_simulator(
-        study=study,
-        environment=env_bundle,
-        population=pop_bundle,
-        simulation=sim_config,
+        env_bundle=env_bundle,
+        pop_bundle=pop_bundle,
+        sim_config=sim_config,
+        store_path=store_path,
     )
-    result = simulator.run()
+    personas, _panel0 = simulator.materialize_initial()
+    history = simulator.run()
     out_dir.mkdir(parents=True, exist_ok=True)
     (out_dir / "engine_result.json").write_text(
-        json.dumps(result if isinstance(result, dict) else str(result), ensure_ascii=False, indent=2),
+        json.dumps(
+            {"study_id": history.study_id, "rows": history.rows,
+             "schema_columns": history.schema_columns},
+            ensure_ascii=False,
+            indent=2,
+        ),
         encoding="utf-8",
-        default=str,
     )
-    rows = getattr(getattr(simulator, "collector", None), "rows", None) or []
+    # The engine's collector is the same AschMetricCollector that the standalone
+    # driver uses, so its per-step rows can be exported identically. The t=0
+    # aggregate carries no trial_id and is dropped before the per-session summary.
+    rows = [
+        r for r in (getattr(getattr(simulator, "collector", None), "rows", None) or [])
+        if r.get("trial_id")
+    ]
     summary = {}
     if rows:
         from asch.metrics import write_metrics
 
         summary = write_metrics(out_dir, rows)
-    return summary, {"llm_kind": llm_kind, "model": model or "default", "calls": None, "fallbacks": None}
+    return summary, {
+        "llm_kind": llm_kind,
+        "model": model or "default",
+        "n_agents": len(personas),
+        "calls": None,
+        "fallbacks": None,
+    }
 
 
 # --------------------------------------------------------------------------
