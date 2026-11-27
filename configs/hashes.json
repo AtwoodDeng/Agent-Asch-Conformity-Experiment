@@ -8,8 +8,8 @@
     "asch/distractors.py": "dd167f2d919f4711d8777e5144ea827cee669bd2a4b679a47e897d66eef17b34"
   },
   "artifacts": {
-    "stimuli/manifest.json": "41c213e8a8f48241c7f73268855f7d5277e91e23565d21301bd11cf397dcb588",
-    "stimuli/answer_key.json": "682dbc9b270adf23b3e6bfd69360ad04b5b20672da49fd650d9aa66509e3432e",
-    "distractors/streams.json": "2495dd6d6db39106b522595befbe1a30fca1bd553204e14fba6ecaeb70547d41"
+    "stimuli/manifest.json": "c04cec4f872de5abd1c74f88a529a4f3efd061651087ca24b0515edd0283bf00",
+    "stimuli/answer_key.json": "25216d1745d632e3c8b393a487430d59cf1ccf38facbbb0a2d8400b86a7d836b",
+    "distractors/streams.json": "a4442cd8335cc0a4eedd689b6d29e2cc467d2327496fdf52ee2b086e4738c0d3"
   }
 }

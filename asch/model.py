@@ -31,23 +31,66 @@ import random
 import re
 import threading
 from concurrent.futures import ThreadPoolExecutor
+from pathlib import Path
 from typing import Any
 
 from asch.prompts import build_messages, parse_answer
 
-LLM_KINDS = ("scripted", "openai")
+SCRIPTED_KIND = "scripted"
 SCRIPTED_POLICIES = ("random", "first", "last", "peer")
-
 DEFAULT_SCRIPTED_POLICY = "random"
+
+# One OpenAI-compatible client slot per provider key, mirroring the sibling
+# tajfel-study (``tajfel/model.py``). Each slot reads its own SV_LLM* / SV_LLM<N>*
+# environment variables so several providers can be configured side by side.
+# Only ``openai`` is registered for now; add a slot here plus the matching
+# SV_LLM<N>_* lines in .env to register another provider.
+LLM_PROVIDERS: dict[str, dict[str, str]] = {
+    "openai": {
+        "prefix": "SV_LLM",
+        "default_base_url": "https://api.openai.com/v1",
+        "default_model": "gpt-4o",
+    },
+}
+
+# ``LLM_KINDS`` keeps the historical name that ``scripts/freeze_hashes.py`` and
+# ``scripts/run_asch.py`` import; it is derived from the provider registry so it
+# can never disagree with ``LLM_PROVIDERS``.
+LLM_KINDS = (SCRIPTED_KIND, *LLM_PROVIDERS)
 
 KEY_FIELDS = ("correct", "correct_answer", "error", "designated_error", "answer_key", "is_correct")
 
 
-def _load_dotenv() -> None:
+def is_llm_kind(kind: str) -> bool:
+    """True for any kind that resolves to a real LLM client (vs ``scripted``)."""
+    return kind in LLM_PROVIDERS
+
+
+def _provider_env(provider: str) -> tuple[str, str, str]:
+    """(api_key, base_url, model) resolved from the environment for one provider slot."""
+    cfg = LLM_PROVIDERS[provider]
+    prefix = cfg["prefix"]
+    api_key = os.environ.get(f"{prefix}_API_KEY") or ""
+    if provider == "openai":
+        # The legacy alias; the SV_LLM_* key still wins when both are set.
+        api_key = api_key or os.environ.get("OPENAI_API_KEY", "")
+    base_url = os.environ.get(f"{prefix}_BASE_URL") or cfg["default_base_url"]
+    model = os.environ.get(f"{prefix}_MODEL") or cfg["default_model"]
+    return api_key, base_url, model
+
+
+def _load_dotenv(root: Path | None = None) -> None:
+    """Load ``.env`` through the platform loader when present, else python-dotenv.
+
+    The platform loader (``socioverse.external_events._load_dotenv``) is the same
+    entry point the tajfel-study client uses; python-dotenv is the offline
+    fallback so the standalone driver and the test suite can still read a local
+    ``.env`` without the runtime installed.
+    """
     try:
         from socioverse.external_events import _load_dotenv as platform_load
 
-        platform_load()
+        platform_load(root)
         return
     except Exception:  # pragma: no cover - depends on the platform install
         pass
@@ -108,14 +151,29 @@ def check_no_key_leak(observation: Any) -> None:
 
 
 class _OpenAILLM:
+    """Thin OpenAI-compatible client over one registered provider slot, lazily connected.
+
+    Unlike the tajfel-study client (text-only ``__call__``), this one exposes
+    ``complete(messages)`` because the Asch task requires a multimodal request:
+    the stimulus image is attached to every trial (§3.1 of the plan). The message
+    list is assembled by :func:`asch.prompts.build_messages`.
+    """
+
     def __init__(
         self,
         model: str | None = None,
         temperature: float = 0.7,
         max_tokens: int = 24,
         timeout: float = 60.0,
+        provider: str = "openai",
     ) -> None:
-        self.model = model or os.environ.get("SV_LLM_MODEL", "gpt-4o")
+        if provider not in LLM_PROVIDERS:
+            raise ValueError(
+                f"unknown LLM provider {provider!r}; expected one of {tuple(LLM_PROVIDERS)}"
+            )
+        self.provider = provider
+        self.api_key, self.base_url, self.default_model = _provider_env(provider)
+        self.model = model or self.default_model
         self.temperature = temperature
         self.max_tokens = max_tokens
         self.timeout = timeout
@@ -129,16 +187,20 @@ class _OpenAILLM:
             if self._client is None:
                 from openai import OpenAI
 
-                api_key = os.environ.get("SV_LLM_API_KEY") or os.environ.get("OPENAI_API_KEY")
-                if not api_key:
+                prefix = LLM_PROVIDERS[self.provider]["prefix"]
+                if not self.api_key:
                     raise RuntimeError(
-                        "no API key: set SV_LLM_API_KEY or OPENAI_API_KEY, "
+                        f"no API key for LLM provider {self.provider!r}; "
+                        f"set {prefix}_API_KEY (or OPENAI_API_KEY) in .env, "
                         "or run with --llm scripted"
                     )
-                kwargs: dict[str, Any] = {"api_key": api_key, "timeout": self.timeout}
-                base_url = os.environ.get("SV_LLM_BASE_URL")
-                if base_url:
-                    kwargs["base_url"] = base_url
+                if not self.model:
+                    raise RuntimeError(
+                        f"no model for LLM provider {self.provider!r}; set {prefix}_MODEL in .env"
+                    )
+                kwargs: dict[str, Any] = {"api_key": self.api_key, "timeout": self.timeout}
+                if self.base_url:
+                    kwargs["base_url"] = self.base_url
                 self._client = OpenAI(**kwargs)
         return self._client
 
@@ -154,10 +216,10 @@ class _OpenAILLM:
 
 
 def _make_llm(kind: str, **kwargs: Any) -> _OpenAILLM | None:
-    if kind == "scripted":
+    if kind == SCRIPTED_KIND:
         return None
-    if kind == "openai":
-        return _OpenAILLM(**kwargs)
+    if is_llm_kind(kind):
+        return _OpenAILLM(provider=kind, **kwargs)
     raise ValueError(f"unknown llm_kind {kind!r}; expected one of {LLM_KINDS}")
 
 
@@ -227,7 +289,10 @@ class AschDecisionModel(_abc()):  # type: ignore[misc]
         timeout: float = 60.0,
     ) -> None:
         if llm_kind not in LLM_KINDS:
-            raise ValueError(f"unknown llm_kind {llm_kind!r}")
+            raise ValueError(
+                f"unknown llm_kind {llm_kind!r}; "
+                f"expected {SCRIPTED_KIND!r} or one of {tuple(LLM_PROVIDERS)}"
+            )
         if policy not in SCRIPTED_POLICIES:
             raise ValueError(f"unknown scripted policy {policy!r}")
         if prompt_lang != "zh":

@@ -107,6 +107,52 @@ def test_scripted_policy_never_reads_the_key():
     assert agree <= 6
 
 
+def test_llm_provider_registry_resolves_env_like_the_tajfel_client(monkeypatch):
+    """The provider registry is the single source of --llm choices (tajfel-style)."""
+    from asch.model import (
+        LLM_KINDS,
+        LLM_PROVIDERS,
+        SCRIPTED_KIND,
+        _provider_env,
+        is_llm_kind,
+    )
+
+    assert set(LLM_PROVIDERS) == {"openai"}
+    assert LLM_KINDS == (SCRIPTED_KIND, *LLM_PROVIDERS)
+    assert is_llm_kind("openai") is True
+    assert is_llm_kind(SCRIPTED_KIND) is False
+
+    monkeypatch.delenv("SV_LLM_API_KEY", raising=False)
+    monkeypatch.delenv("OPENAI_API_KEY", raising=False)
+    monkeypatch.delenv("SV_LLM_BASE_URL", raising=False)
+    monkeypatch.delenv("SV_LLM_MODEL", raising=False)
+    assert _provider_env("openai") == ("", "https://api.openai.com/v1", "gpt-4o")
+
+    monkeypatch.setenv("SV_LLM_API_KEY", "k1")
+    monkeypatch.setenv("OPENAI_API_KEY", "k2")
+    monkeypatch.setenv("SV_LLM_BASE_URL", "https://example.test/v1")
+    monkeypatch.setenv("SV_LLM_MODEL", "gpt-4o-mini")
+    assert _provider_env("openai") == ("k1", "https://example.test/v1", "gpt-4o-mini")
+
+    # SV_LLM_* wins over the OPENAI_API_KEY fallback alias.
+    monkeypatch.delenv("SV_LLM_API_KEY")
+    assert _provider_env("openai")[0] == "k2"
+
+
+def test_decision_model_rejects_unknown_llm_kind_and_builds_openai_lazily():
+    from asch.model import AschDecisionModel
+
+    with pytest.raises(ValueError, match="unknown llm_kind"):
+        AschDecisionModel(llm_kind="bogus")
+
+    # Constructing the openai client must not import the openai SDK or read a
+    # key; both happen lazily on the first completed request.
+    model = AschDecisionModel(llm_kind="openai")
+    assert model.llm is not None
+    assert model.llm.provider == "openai"
+    assert model.model_name == "gpt-4o"
+
+
 # --------------------------------------------------------------------------
 # Peer visibility must match the condition, exactly.
 # --------------------------------------------------------------------------

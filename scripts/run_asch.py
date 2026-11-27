@@ -230,12 +230,28 @@ def run_via_engine(
 
 
 def build_parser() -> argparse.ArgumentParser:
+    # Imported lazily so ``--local-stub`` can install the socioverse stand-in
+    # before ``asch.model`` registers its class. The try/except keeps a bare
+    # ``--help`` usable offline without the stub (the fallback list only feeds
+    # argparse's help text; a real run still imports the registry).
+    try:
+        from asch.model import LLM_PROVIDERS
+
+        llm_choices = ["scripted", *LLM_PROVIDERS]
+    except Exception:  # pragma: no cover - offline --help before the stub install
+        llm_choices = ["scripted", "openai"]
+
     parser = argparse.ArgumentParser(description="Run Asch line-judgement sessions.")
     parser.add_argument("--condition", default="C1", help="C0|C1|C2|C3|C4|all")
     parser.add_argument("--session", default=None, help="single session id, e.g. C1-S03")
     parser.add_argument("--sessions", default="1-3", help="session indices within the condition, e.g. 1-12")
     parser.add_argument("--arrangement", default=None, help="restrict to A1|A2|A3")
-    parser.add_argument("--llm", default="scripted", choices=("scripted", "openai"))
+    parser.add_argument(
+        "--llm",
+        default="scripted",
+        choices=llm_choices,
+        help="scripted = offline blind policy; each provider key = real multimodal LLM calls",
+    )
     parser.add_argument("--model", default=None)
     parser.add_argument("--temperature", type=float, default=0.7)
     parser.add_argument("--max-tokens", type=int, default=24)

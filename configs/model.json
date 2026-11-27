@@ -4,6 +4,13 @@
     "openai"
   ],
   "default_llm_kind": "scripted",
+  "llm_providers": {
+    "openai": {
+      "prefix": "SV_LLM",
+      "default_base_url": "https://api.openai.com/v1",
+      "default_model": "gpt-4o"
+    }
+  },
   "scripted_policies": [
     "random",
     "first",

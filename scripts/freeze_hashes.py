@@ -80,11 +80,12 @@ def ensure_importable() -> None:
 
 def build_model_config() -> dict[str, Any]:
     ensure_importable()
-    from asch.model import DEFAULT_SCRIPTED_POLICY, LLM_KINDS, SCRIPTED_POLICIES
+    from asch.model import DEFAULT_SCRIPTED_POLICY, LLM_KINDS, LLM_PROVIDERS, SCRIPTED_POLICIES
 
     return {
         "llm_kinds": list(LLM_KINDS),
         "default_llm_kind": "scripted",
+        "llm_providers": {key: dict(cfg) for key, cfg in LLM_PROVIDERS.items()},
         "scripted_policies": list(SCRIPTED_POLICIES),
         "default_scripted_policy": DEFAULT_SCRIPTED_POLICY,
         "sampling": {
