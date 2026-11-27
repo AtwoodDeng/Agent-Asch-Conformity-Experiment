@@ -306,7 +306,9 @@ def paradigm_recognition(index_sessions: list[dict[str, Any]]) -> dict[str, Any]
     a scripted run, since it needs a real model -- the honest answer is that
     recognition is unknown, not that recognition did not occur.
     """
-    flagged = [s for s in index_sessions if "debrief_recognized" in s]
+    # ``debrief_recognized`` is written into the per-session summary object in
+    # index.json, not at the top level of the session entry.
+    flagged = [s for s in index_sessions if "debrief_recognized" in (s.get("summary") or {})]
     if not flagged:
         return {
             "measured": False,
@@ -316,7 +318,9 @@ def paradigm_recognition(index_sessions: list[dict[str, Any]]) -> dict[str, Any]
                 "Paradigm recognition is therefore unknown, not absent."
             ),
         }
-    recognised = [s for s in flagged if s["debrief_recognized"] is True]
+    recognised = [
+        s for s in flagged if (s.get("summary") or {}).get("debrief_recognized") is True
+    ]
     return {
         "measured": True,
         "n_sessions": len(flagged),

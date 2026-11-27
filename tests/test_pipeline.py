@@ -139,11 +139,17 @@ def test_llm_provider_registry_resolves_env_like_the_tajfel_client(monkeypatch):
     assert _provider_env("openai")[0] == "k2"
 
 
-def test_decision_model_rejects_unknown_llm_kind_and_builds_openai_lazily():
+def test_decision_model_rejects_unknown_llm_kind_and_builds_openai_lazily(monkeypatch):
     from asch.model import AschDecisionModel
 
     with pytest.raises(ValueError, match="unknown llm_kind"):
         AschDecisionModel(llm_kind="bogus")
+
+    # A local .env may override the provider defaults; clear it so this test is
+    # deterministic regardless of the developer's machine.
+    monkeypatch.delenv("SV_LLM_MODEL", raising=False)
+    monkeypatch.delenv("SV_LLM_API_KEY", raising=False)
+    monkeypatch.delenv("SV_LLM_BASE_URL", raising=False)
 
     # Constructing the openai client must not import the openai SDK or read a
     # key; both happen lazily on the first completed request.

@@ -377,10 +377,10 @@ def test_paradigm_recognition_is_unknown_when_the_probe_did_not_run():
 
 def test_paradigm_recognition_reports_rate_without_excluding_recognisers():
     sessions = [
-        {"condition": "C1", "debrief_recognized": True},
-        {"condition": "C1", "debrief_recognized": False},
-        {"condition": "C2", "debrief_recognized": False},
-        {"condition": "C2", "debrief_recognized": False},
+        {"condition": "C1", "summary": {"debrief_recognized": True}},
+        {"condition": "C1", "summary": {"debrief_recognized": False}},
+        {"condition": "C2", "summary": {"debrief_recognized": False}},
+        {"condition": "C2", "summary": {"debrief_recognized": False}},
     ]
     out = paradigm_recognition(sessions)
     assert out["measured"] is True

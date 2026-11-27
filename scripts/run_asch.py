@@ -104,6 +104,7 @@ def run_standalone(
     temperature: float,
     max_tokens: int,
     policy: str,
+    debrief: bool = False,
 ) -> tuple[dict[str, Any], dict[str, Any]]:
     from asch.env import AschEnvironment
     from asch.metrics import AschMetricCollector, write_metrics
@@ -147,12 +148,13 @@ def run_standalone(
     (out_dir / "transcript.txt").write_text(environment.prompt_transcript(), encoding="utf-8")
     summary = write_metrics(out_dir, collector.frame())
 
-    debrief = run_debrief(environment, decision)
-    if debrief is not None:
-        (out_dir / "debrief.json").write_text(
-            json.dumps(debrief, ensure_ascii=False, indent=2), encoding="utf-8"
-        )
-        summary["debrief_recognized"] = debrief["recognized_paradigm"]
+    if debrief:
+        probe = run_debrief(environment, decision)
+        if probe is not None:
+            (out_dir / "debrief.json").write_text(
+                json.dumps(probe, ensure_ascii=False, indent=2), encoding="utf-8"
+            )
+            summary["debrief_recognized"] = probe["recognized_paradigm"]
     return summary, decision.counters()
 
 
@@ -188,11 +190,13 @@ def run_via_engine(
     temperature: float,
     max_tokens: int,
     policy: str,
+    debrief: bool = False,
 ) -> tuple[dict[str, Any], dict[str, Any]]:
     from socioverse.engine import build_simulator
 
     from asch import register_providers
     from asch.bundles import make_asch_bundles
+    from asch.population import confederate_agent_ids
 
     # Importing is registration: the runtime modules register their provider
     # classes with the engine's registry before build_simulator resolves them.
@@ -220,7 +224,26 @@ def run_via_engine(
     )
     personas, _panel0 = simulator.materialize_initial()
     history = simulator.run()
+
+    # The engine owns the same AschEnvironment the standalone driver builds, so
+    # dump the identical per-session artifacts (trials/record/snapshot/transcript)
+    # for the analysis layer and the §9 deliverables.
+    env = simulator.env
     out_dir.mkdir(parents=True, exist_ok=True)
+    (out_dir / "trials.json").write_text(
+        json.dumps(env.rows, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
+    (out_dir / "record.json").write_text(
+        json.dumps(env.record.to_dict(), ensure_ascii=False, indent=2), encoding="utf-8"
+    )
+    snapshot = env.snapshot()
+    snapshot["scripted_seats"] = [a for a in confederate_agent_ids()]
+    snapshot["model"] = simulator.decision.counters()
+    (out_dir / "snapshot.json").write_text(
+        json.dumps(snapshot, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
+    (out_dir / "transcript.txt").write_text(env.prompt_transcript(), encoding="utf-8")
+
     (out_dir / "engine_result.json").write_text(
         json.dumps(
             {"study_id": history.study_id, "rows": history.rows,
@@ -237,11 +260,20 @@ def run_via_engine(
         r for r in (getattr(getattr(simulator, "collector", None), "rows", None) or [])
         if r.get("trial_id")
     ]
-    summary = {}
+    summary: dict[str, Any] = {}
     if rows:
         from asch.metrics import write_metrics
 
         summary = write_metrics(out_dir, rows)
+
+    if debrief:
+        probe = run_debrief(env, simulator.decision)
+        if probe is not None:
+            (out_dir / "debrief.json").write_text(
+                json.dumps(probe, ensure_ascii=False, indent=2), encoding="utf-8"
+            )
+            summary["debrief_recognized"] = probe["recognized_paradigm"]
+
     return summary, {
         "llm_kind": llm_kind,
         "model": model or "default",
@@ -351,6 +383,7 @@ def main(argv: list[str] | None = None) -> int:
                 temperature=args.temperature,
                 max_tokens=args.max_tokens,
                 policy=args.policy,
+                debrief=args.debrief,
             )
         except Exception:
             failures += 1
